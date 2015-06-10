@@ -6,6 +6,10 @@ Predix Experience Toggle module is a simple implementation of a toggle switch fo
 
 You can review toggle styles and recommended markup here: https://github.build.ge.com/pages/PXd/px-toggle-design
 
+## Sass Docs
+
+You can review Sass Documentation here: https://github.build.ge.com/pages/PXd/px-toggle-design/sassdoc
+
 ## Dependencies
 
 Px's Toggle module depends on three other PXd modules:
