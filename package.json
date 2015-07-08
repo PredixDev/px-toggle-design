@@ -1,6 +1,6 @@
 {
   "name": "px-toggle-design",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Toggle control styles for Predix Experience",
   "private": true,
   "scripts": {
