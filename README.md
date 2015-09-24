@@ -2,13 +2,10 @@
 
 Predix Experience Toggle module is a simple implementation of a toggle switch for on/off states.
 
-## Demo
 
-You can review toggle styles and recommended markup here: https://github.com/pages/PredixDev/px-toggle-design
 
-## Sass Docs
 
-You can review Sass Documentation here: https://github.com/pages/PredixDev/px-toggle-design/sassdoc
+
 
 ## Dependencies
 
