@@ -1,15 +1,10 @@
 # Toggle
 
-Predix Experience Toggle module is a simple implementation of a toggle switch for on/off states.
-
-
-
-
-
+Predix UI Toggle module is a simple implementation of a toggle switch for on/off states.
 
 ## Dependencies
 
-Px's Toggle module depends on three other PXd modules:
+Predix UI's Toggle module depends on three other PX modules:
 
 * [px-colors-design](https://github.com/PredixDev/px-colors-design)
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
@@ -19,9 +14,9 @@ Px's Toggle module depends on three other PXd modules:
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.com/PredixDev/px-toggle-design.git
+    bower install --save px-toggle-design
 
-Once installed, `@import` into your project's Sass file in its Objects layer:
+Once installed, `@import` into your project's Sass file in its **Objects** layer:
 
     @import "px-toggle-design/_objects.toggle.scss";
 
@@ -49,3 +44,5 @@ The following variables are available for use in the module:
 These classes are available if the variable flags listed above are set to `true`:
 
 * `toggle__[input|label]--[small|large|huge]`: Small, large, or huge toggles
+
+view the full API [here](http://predixdev.github.io/px-toggle-design/sassdoc/)

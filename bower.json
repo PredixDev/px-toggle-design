@@ -1,6 +1,6 @@
 {
   "name": "px-toggle-design",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "authors": [
     "General Electric"
   ],
@@ -19,7 +19,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "OSS_Notice.pdf"
   ],
   "dependencies": {
     "px-colors-design": "https://github.com/PredixDev/px-colors-design.git#~0.2.0",

@@ -1,7 +1,7 @@
 {
   "name": "px-toggle-design",
-  "version": "0.2.11",
-  "description": "Toggle control styles for Predix Experience",
+  "version": "0.2.12",
+  "description": "Toggle control styles for Predix UI",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
