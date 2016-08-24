@@ -11,7 +11,7 @@ module.exports = {
       removeStyleLinkTypeAttributes: true
     },
     files: {
-      'dist/index.html': 'src/index.html'
+      'dist/index.html': 'index.html'
     }
   }
 }

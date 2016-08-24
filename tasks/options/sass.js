@@ -10,7 +10,8 @@ module.exports = {
       }
     },
     files: {
-      'dist/css/src/style.css': 'src/style.scss'
+      'dist/css/src/style.css': 'style.scss',
+      'dist/css/px-toggle-design-demo.css': 'px-toggle-design-demo.scss'
     }
   }
 }
