@@ -3,11 +3,11 @@ module.exports = {
     livereload: true,
   },
   css: {
-    files: ['*.scss', 'src/*.scss'],
+    files: ['*.scss', 'sass/*.scss'],
     tasks: ['sass', 'autoprefixer']
   },
   html:{
-    files: ['src/*.html'],
+    files: ['index.html'],
     tasks: ['htmlmin']
   }
 }

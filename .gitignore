@@ -4,6 +4,7 @@
 
 .sass-cache
 *.css.map
+css/noprefix
 
 ## OSX
 

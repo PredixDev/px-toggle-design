@@ -87,7 +87,7 @@
                   <div class="demo u-p+">
                   <span id="counter"><strong>px-toggle-design-submitted</strong> fired <strong>0</strong> time</span>
                   <div>
-                    Current dateTime object: <strong>{{item.dateTime}}</strong>
+                    Current dateTime object:
                   </div>
                   <br />
                 </div>
@@ -134,16 +134,7 @@
 
 <script>
 window.addEventListener('WebComponentsReady', function() {
-  var template = document.querySelector('template[is=dom-bind]'),
-
-
-
-
-    template.selected = "0";
-    template.optionsArray = optionsArray;
-    template.indexPlusOne = indexPlusOne;
-    template.year = year;
-
+  var template = document.querySelector('template[is=dom-bind]');
 });
 </script>
 
