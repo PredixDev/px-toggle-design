@@ -11,7 +11,6 @@
     "sass",
     "toggle"
   ],
-  "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-toggle-design.git",
   "private": false,
   "ignore": [
