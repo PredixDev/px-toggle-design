@@ -37,7 +37,7 @@ function buildCSS(){
   ]);
 }
 
-gulp.task('demosass', function() {
+gulp.task('sass', function() {
   return gulp.src(['./sass/*-demo.scss'])
     .pipe(buildCSS())
     .pipe(gulp.dest('css'))
@@ -45,7 +45,7 @@ gulp.task('demosass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['_*.scss', 'sass/*-demo.scss'], ['demosass']);
+  gulp.watch(['_*.scss', 'sass/*-demo.scss'], ['sass']);
 });
 
 gulp.task('serve', function() {
@@ -60,7 +60,7 @@ gulp.task('serve', function() {
   });
 
   gulp.watch(['*.html']).on('change', browserSync.reload);
-  gulp.watch(['_*.scss', 'sass/*-demo.scss'], ['demosass']);
+  gulp.watch(['_*.scss', 'sass/*-demo.scss'], ['sass']);
 
 });
 
@@ -83,5 +83,5 @@ gulp.task('bump:major', function(){
 });
 
 gulp.task('default', function(callback) {
-  gulpSequence('clean', 'demosass')(callback);
+  gulpSequence('clean', 'sass')(callback);
 });
