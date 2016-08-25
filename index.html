@@ -9,23 +9,19 @@
   <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
   <script src="../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../px-theme/px-theme.html"/>
+  <link rel="import" href="./px-dropdown/px-dropdown.html"/>
   <!-- <link rel="import" href="../px-api-viewer/px-api-viewer.html" /> -->
   <link rel="import" href="../px-tabs/px-tab-set.html" />
   <!-- <link rel="import" href="../iron-component-page/iron-component-page.html"/> -->
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <!-- <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"> -->
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
-  <style>
-      .demo{
-        flex-basis: 475px;
-      }
-    </style>
   </head>
 
 <body>
   <!-- Wrap elements with auto-binding template to -->
   <!-- allow use of Polymer bindings in main document -->
-  <template id="just-for-demo" is="dom-bind" >
+  <template id="just-for-demo" is="dom-bind">
 
     <!-- discription -->
     <div class="hero u-p++ text--shadow">
@@ -36,79 +32,63 @@
       <h1 class="delta">px-toggle-design</h1>
       <div class="description-text">
         <p >
-    			The	<code>px-toggle-design</code> component includes various elements used for structuring responsive layouts.
-    		</p>
-        <p >
-          This component allows the user to select a date and time precisely to the second or millisecond.
-        </p>
-        <p >
-          The counter represents when the px-toggle-design event/date property of the
-        field is being fired/updated. The behavior depends on whether the field uses
-        buttons. It is defined as followed:
-        <br>
-        - If it has buttons then it is fired when the user clicks the apply button AND the date/time is valid
-        <br>
-        - If it doesn't have buttons then it is fired every time a valid change is made to the date or time
+          Description here
         </p>
       </div>
   		<div class="flex">
-  			<!-- <img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/>
+  			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/>
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-toggle-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
-  			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/> -->
+  			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
   		</div>
   	</div>
 
     <!-- mega demo -->
     <div style="position: relative;" class="u-pb++ flex flex--col" id="defaultTab">
-      <div class="tabContainer u-pt++ u-pl++">
-        <px-tab-set selected="{{selected}}" bare no-bottom-border>
-          <template is="dom-repeat" items="{{optionsArray}}">
-            <px-tab>Option {{indexPlusOne(index)}}</px-tab>
-          </template>
-        </px-tab-set>
-      </div>
-      <px-tab-pages selected="{{selected}}">
-        <template is="dom-repeat" items="{{optionsArray}}">
-          <section class="tab-page">
-            <div class="mega-demo flex u-ph++ u-pb++">
-              <!-- Properties -->
-              <div class="properties u-ph+ u-pb+ u-mt+">
-              <p class="epsilon">Properties</p>
-              <div class="flex u-mb-">
-                <input  class="toggle__input toggle__input--small" type="checkbox">
-                <label  class="toggle__label toggle__label--small"></label>
-                <div class="u-ml-">Hide date</div>
-              </div>
+      <section class="tab-page">
+        <div class="mega-demo flex u-ph++ u-pb++">
+          <div class="properties u-ph+ u-pb+ u-mt+">
+          <p class="epsilon">Properties</p>
+          <div class="u-mb-">Size:
+            <div style="width: 100%;">
+              <px-dropdown id="showTimeZone" display-value="regular" bound-target="properties">
+                <px-dropdown-content
+                  items='[
+                    {"key":"one", "val": "small"},
+                    {"key":"two", "val": "regular"},
+                    {"key":"three", "val": "large"},
+                    {"key":"four", "val": "huge"}]'>
+                </px-dropdown-content>
+              </px-dropdown>
             </div>
+          </div>
+        </div>
 
-            <div class="demoContainer u-mt+">
-                <!-- demo -->
-                <div class="flex flex--col">
-                  <div class="demo u-p+">
-                  <span id="counter"><strong>px-toggle-design-submitted</strong> fired <strong>0</strong> time</span>
-                  <div>
-                    Current dateTime object:
-                  </div>
-                  <br />
+        <div class="demoContainer u-mt+">
+            <div class="flex flex--col">
+              <div class="demo u-p+">
+                <div class="flex u-mb-">
+                  <input type="checkbox" checked="{{togglecheck::change}}">
+                  <!-- <input id="toggleButtons" class="toggle__input toggle__input--small" type="checkbox" checked="{{togglecheck::change}}">
+                  <label for="toggleButtons" class="toggle__label toggle__label--small"></label> -->
+                  <div class="u-ml-">Hide date is {{togglecheck}}</div>
                 </div>
-                <div>
-                  <!-- <px-demo-snippet
-                    element-name="px-toggle-design">
-                  </px-demo-snippet> -->
-                </div>
-              </div>
+            </div>
+            <div>
+              <px-demo-snippet
+                element-name="px-toggle-design">
+              </px-demo-snippet>
             </div>
           </div>
-          <div class="apiContainer">
-            <div class="flex flex--col api u-mt++" >
-              <div>
-                <!-- <px-api-viewer source="px-toggle-design"></px-api-viewer> -->
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="apiContainer">
+        <div class="flex flex--col api u-mt++" >
+          <div>
+            <px-api-viewer source="px-toggle-design"></px-api-viewer>
           </div>
-        </section>
-      </template>
-    </px-tab-pages>
+        </div>
+      </div>
+    </section>
   </div>
   <footer class="footer flex flex--center">
     <div class="footer__container u-pv++">
@@ -133,9 +113,11 @@
 </template>
 
 <script>
-window.addEventListener('WebComponentsReady', function() {
-  var template = document.querySelector('template[is=dom-bind]');
-});
+  document.addEventListener('WebComponentsReady', function() {
+    var template = document.querySelector('template[is=dom-bind]'),
+        togglecheck = false;
+        template.togglecheck = togglecheck;
+  });
 </script>
 
 </body>

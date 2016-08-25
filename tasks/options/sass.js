@@ -10,8 +10,8 @@ module.exports = {
       }
     },
     files: {
-      'css/noprefix/style.css': 'sass/style.scss',
-      'css/noprefix/px-toggle-design-demo.css': 'sass/px-toggle-design-demo.scss'
+      'dist/css/style.css': 'sass/style.scss',
+      'dist/css/px-toggle-design-demo.css': 'sass/px-toggle-design-demo.scss'
     }
   }
 }
