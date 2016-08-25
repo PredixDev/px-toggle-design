@@ -51,7 +51,7 @@ $inuit-enable-list-inline--delimited : true;
 $inuit-enable-toggle--small : true;
 $inuit-enable-toggle--large : true;
 $inuit-enable-toggle--huge : true;
-@import "px-toggle-design/_objects.toggle.scss";
+@import "../_objects.toggle.scss";
 
 // Component
 .mega-demo{
