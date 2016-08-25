@@ -66,10 +66,15 @@
         <div class="demoContainer u-mt+">
             <div class="flex flex--col">
               <div class="demo u-p+">
+                <div class="u-mb">Toggle size is <strong>{{toggleSize}}</strong></div>
                 <div class="flex u-mb-">
-                  <input id="toggleButtons" class="toggle__input toggle__input--small" type="checkbox" checked="{{togglecheck::change}}">
+                  <input id="toggleButtons" class="toggle__input toggle__input--small" type="checkbox" checked="{{toggleCheck::change}}">
                   <label for="toggleButtons" class="toggle__label toggle__label--small"></label>
-                  <div class="u-ml-">Hide date is {{togglecheck}}</div>
+                  <div class="u-ml-">Toggle checked is <strong>{{toggleCheck}}</strong></div>
+                </div>
+                <div>
+                  <p>$inuit-enable-toggle--small : true;</p>
+                  <p>@import "px-toggle-design/_objects.toggle.scss";</p>
                 </div>
             </div>
             <div>
@@ -114,8 +119,11 @@
 <script>
   document.addEventListener('WebComponentsReady', function() {
     var template = document.querySelector('template[is=dom-bind]'),
-        togglecheck = false;
-        template.togglecheck = togglecheck;
+        toggleCheck = false;
+        dropdownValue = "small"
+        toggleSize = "small";
+        template.toggleCheck = toggleCheck;
+        template.toggleSize = toggleSize;
   });
 </script>
 
