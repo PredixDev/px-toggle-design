@@ -25,8 +25,7 @@
   "dependencies": {
     "px-colors-design": "^0.2.16",
     "px-defaults-design": "^0.2.9",
-    "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#^0.3.5",
-    "px-toggle-design": "^0.2.12"
+    "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#^0.3.5"
   },
   "devDependencies": {
     "px-buttons-design": "~0.4.13",
