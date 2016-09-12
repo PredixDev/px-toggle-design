@@ -32,11 +32,11 @@
       <h1 class="delta">px-toggle-design</h1>
       <div class="description-text">
         <p >
-          Description here
+          The toggle switch component is used for a user input with a binary state. The functionality resembles a checkbox, but is ideal when only one setting or option is being set. It can be set to either an “On” or an “Off” position. Clicking anywhere in the control toggles the state, or in mobile contexts a tap or directional swipe can be used. It is available in four sizes.
         </p>
       </div>
   		<div class="flex">
-  			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/>
+  			<!-- <img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/> -->
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-toggle-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
   			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
   		</div>
@@ -50,13 +50,13 @@
           <p class="epsilon">Properties</p>
           <div class="u-mb-">Size:
             <div style="width: 100%;">
-              <px-dropdown id="showTimeZone" display-value="regular" bound-target="properties">
+              <px-dropdown id="toggleSize" display-value="regular" bound-target="properties">
                 <px-dropdown-content
                   items='[
-                    {"key":"one", "val": "small"},
-                    {"key":"two", "val": "regular"},
-                    {"key":"three", "val": "large"},
-                    {"key":"four", "val": "huge"}]'>
+                    {"key":"small", "val": "small"},
+                    {"key":"regular", "val": "regular"},
+                    {"key":"large", "val": "large"},
+                    {"key":"huge", "val": "huge"}]'>
                 </px-dropdown-content>
               </px-dropdown>
             </div>
@@ -67,26 +67,27 @@
             <div class="flex flex--col">
               <div class="demo u-p+">
                 <div class="flex u-mb-">
-                  <input id="toggleButtons" class="toggle__input toggle__input--small" type="checkbox" checked="{{togglecheck::change}}">
-                  <label for="toggleButtons" class="toggle__label toggle__label--small"></label>
-                  <div class="u-ml-">Hide date is {{togglecheck}}</div>
+                  <input id="toggleInput" class="toggle__input" type="checkbox" checked="{{togglecheck::change}}">
+                  <label id="toggleLabel" for="toggleInput" class="toggle__label"></label>
+                  <div class="u-ml-">Toggle 'checked' value is {{togglecheck}}</div>
                 </div>
             </div>
             <div>
               <px-demo-snippet
-                element-name="px-toggle-design">
+                element-name="px-toggle-design"
+                element-properties="{{props}}">
               </px-demo-snippet>
             </div>
           </div>
         </div>
       </div>
-      <div class="apiContainer">
+      <!-- <div class="apiContainer">
         <div class="flex flex--col api u-mt++" >
           <div>
             <px-api-viewer source="px-toggle-design"></px-api-viewer>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
   </div>
   <footer class="footer flex flex--center">
@@ -114,8 +115,35 @@
 <script>
   document.addEventListener('WebComponentsReady', function() {
     var template = document.querySelector('template[is=dom-bind]'),
-        togglecheck = false;
-        template.togglecheck = togglecheck;
+        togglecheck = false,
+        dropdown = document.querySelector('#toggleSize'),
+        toggleInput = document.querySelector('#toggleInput'),
+        toggleLabel = document.querySelector('#toggleLabel'),
+        props = {
+          "lightDomContent": '<input id=... class=toggle__input type=checkbox><label for=... class=toggle__label>...</label>'
+        };
+    dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
+      switch(evt.detail.key) {
+        case 'regular':
+          toggleInput.classList = 'toggle__input';
+          toggleLabel.classList = 'toggle__label';
+          break;
+        case 'small':
+          toggleInput.classList = 'toggle__input toggle__input--small';
+          toggleLabel.classList = 'toggle__label toggle__label--small';
+          break;
+        case 'large':
+          toggleInput.classList = 'toggle__input toggle__input--large';
+          toggleLabel.classList = 'toggle__label toggle__label--large';
+          break;
+        case 'huge':
+          toggleInput.classList = 'toggle__input toggle__input--huge';
+          toggleLabel.classList = 'toggle__label toggle__label--huge';
+          break;
+      }
+    });
+    template.togglecheck = togglecheck;
+    template.props = props;
   });
 </script>
 
