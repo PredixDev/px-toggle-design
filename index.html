@@ -15,6 +15,7 @@
   <!-- <link rel="import" href="../iron-component-page/iron-component-page.html"/> -->
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <!-- <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"> -->
+  <link rel="import" href="../px-clipboard/px-clipboard.html">
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
   </head>
 
@@ -36,7 +37,6 @@
         </p>
       </div>
   		<div class="flex">
-  			<!-- <img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/> -->
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-toggle-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
   			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
   		</div>
@@ -47,7 +47,7 @@
       <section class="tab-page">
         <div class="mega-demo flex u-ph++ u-pb++">
           <div class="properties u-ph+ u-pb+ u-mt+">
-          <p class="epsilon">Properties</p>
+          <p class="epsilon">Options</p>
           <div class="u-mb-">Size:
             <div style="width: 100%;">
               <px-dropdown id="toggleSize" display-value="regular" bound-target="properties">
@@ -67,27 +67,112 @@
             <div class="flex flex--col">
               <div class="demo u-p+">
                 <div class="flex u-mb-">
-                  <input id="toggleInput" class="toggle__input" type="checkbox" checked="{{togglecheck::change}}">
-                  <label id="toggleLabel" for="toggleInput" class="toggle__label"></label>
+                  <input id="toggleInput" class$="{{inputClass}}" type="checkbox" checked="{{togglecheck::change}}">
+                  <label id="toggleLabel" for="toggleInput" class$="{{labelClass}}"></label>
                   <div class="u-ml-">Toggle 'checked' value is {{togglecheck}}</div>
                 </div>
-            </div>
-            <div>
-              <px-demo-snippet
-                element-name="px-toggle-design"
-                element-properties="{{props}}">
-              </px-demo-snippet>
+                <h4>Import (in your Objects layer):</h4>
+                <px-clipboard copy-from="#import">
+                  <figure class="code u-mr-">
+                    <code id="import">
+                      $inuit-enable-toggle--small : true;<br/>
+                      $inuit-enable-toggle--large : true;<br/>
+                      $inuit-enable-toggle--huge : true;<br/>
+                      @import "px-toggle-design/_objects.toggle.scss";
+                    </code>
+                  </figure>
+                </px-clipboard>
+                <h4>Usage:</h4>
+                <px-clipboard copy-from="#usage">
+                  <figure class="code u-mr-">
+                    <code id="usage">
+                      &lt;input id="toggle1" class="{{inputClass}}" type="checkbox"&gt;<br/>
+                      &lt;label for="toggle1" class="{{labelClass}}"&gt;&lt;/label&gt;
+                    </code>
+                  </figure>
+                </px-clipboard>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="apiContainer">
-        <div class="flex flex--col api u-mt++" >
-          <div>
-            <px-api-viewer source="px-toggle-design"></px-api-viewer>
-          </div>
+      <div class="apiContainer">
+        <div class="flex flex--col api u-mt++">
+
+          <div class="componentHeader">Install</div>
+          <p>Install via command line:</p>
+          <px-clipboard copy-from="#install">
+            <figure class="code u-mr-">
+              <code id="install">
+                bower install --save https://github.build.ge.com/PXd/px-toggle-design.git
+              </code>
+            </figure>
+          </px-clipboard>
+
+          <div class="componentHeader">Enable & Import</div>
+          <p>The following flags are available and, if necessary, should be set to true prior to the import statement below.</p>
+          <px-clipboard copy-from="#enable">
+            <figure class="code u-mr-">
+              <code id="enable">
+                $inuit-enable-toggle--small : true;<br/>
+                $inuit-enable-toggle--large : true;<br/>
+                $inuit-enable-toggle--huge : true;
+              </code>
+            </figure>
+          </px-clipboard>
+          <p>Include the optional flags above and the required import below in your Sass file in the <strong>Objects</strong> layer: <a href="https://github.com/PredixDev/px-getting-started#import-order" target="_blank"><i class="fa fa-question-circle u-mh--"></i>What's this?</a></p>
+          <px-clipboard copy-from="#import">
+            <figure class="code u-mr-">
+              <code id="import">
+                @import "px-toggle-design/_objects.toggle.scss";
+              </code>
+            </figure>
+          </px-clipboard>
+
+          <div class="componentHeader">Customize</div>
+          <p>The following variables are available to customize the style of this element:</p>
+          <px-clipboard copy-from="#customize">
+            <figure class="code u-mr-">
+              <code id="customize">
+                $inuit-toggle-color<br/>
+                $inuit-toggle-background<br/>
+                $inuit-toggle-border<br/>
+                $inuit-toggle-switch<br/>
+                $inuit-toggle-switch-border<br/>
+                $inuit-toggle-switch-shadow<br/>
+                $inuit-toggle-background--on<br/>
+                $inuit-toggle-border--on
+              </code>
+            </figure>
+          </px-clipboard>
+
+          <div class="componentHeader">Use</div>
+          <p>Include the following HTML in your main application to use the element:</p>
+          <px-clipboard copy-from="#use">
+            <figure class="code u-mr-">
+              <code id="use">
+                &lt;input id="toggle1" class="toggle__input" type="checkbox"&gt;<br/>
+                &lt;label for="toggle1" class="toggle__label"&gt;&lt;/label&gt;<br/><br/>
+                &lt;input id="toggle1" class="toggle__input toggle__input--small" type="checkbox"&gt;<br/>
+                &lt;label for="toggle1" class="toggle__label toggle__label--small"&gt;&lt;/label&gt;<br/><br/>
+                &lt;input id="toggle1" class="toggle__input toggle__input--large" type="checkbox"&gt;<br/>
+                &lt;label for="toggle1" class="toggle__label toggle__label--large"&gt;&lt;/label&gt;<br/><br/>
+                &lt;input id="toggle1" class="toggle__input toggle__input--huge" type="checkbox"&gt;<br/>
+                &lt;label for="toggle1" class="toggle__label toggle__label--huge"&gt;&lt;/label&gt;<br/><br/>
+              </code>
+            </figure>
+          </px-clipboard>
+
+          <div class="componentHeader">Dependencies</div>
+          <p>This module depends on the following modules (automatically included with Bower install):
+            <ul>
+              <li><a href="https://github.com/PredixDev/px-colors-design" target="_blank">px-colors-design</a></li>
+              <li><a href="https://github.com/PredixDev/px-defaults-design" target="_blank">px-defaults-design</a></li>
+              <li><a href="https://github.com/PredixDev/px-helpers-design" target="_blank">px-helpers-design</a></li>
+            </ul>
+          </p>
+
         </div>
-      </div> -->
+      </div>
     </section>
   </div>
   <footer class="footer flex flex--center">
@@ -117,33 +202,33 @@
     var template = document.querySelector('template[is=dom-bind]'),
         togglecheck = false,
         dropdown = document.querySelector('#toggleSize'),
-        toggleInput = document.querySelector('#toggleInput'),
-        toggleLabel = document.querySelector('#toggleLabel'),
-        props = {
-          "lightDomContent": '<input id=... class=toggle__input type=checkbox><label for=... class=toggle__label>...</label>'
-        };
+        inputClass = "toggle__input",
+        labelClass = "toggle__label";
     dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
       switch(evt.detail.key) {
         case 'regular':
-          toggleInput.classList = 'toggle__input';
-          toggleLabel.classList = 'toggle__label';
+          inputClass = 'toggle__input';
+          labelClass = 'toggle__label';
           break;
         case 'small':
-          toggleInput.classList = 'toggle__input toggle__input--small';
-          toggleLabel.classList = 'toggle__label toggle__label--small';
+          inputClass = 'toggle__input toggle__input--small';
+          labelClass = 'toggle__label toggle__label--small';
           break;
         case 'large':
-          toggleInput.classList = 'toggle__input toggle__input--large';
-          toggleLabel.classList = 'toggle__label toggle__label--large';
+          inputClass = 'toggle__input toggle__input--large';
+          labelClass = 'toggle__label toggle__label--large';
           break;
         case 'huge':
-          toggleInput.classList = 'toggle__input toggle__input--huge';
-          toggleLabel.classList = 'toggle__label toggle__label--huge';
+          inputClass = 'toggle__input toggle__input--huge';
+          labelClass = 'toggle__label toggle__label--huge';
           break;
       }
+      template.inputClass = inputClass;
+      template.labelClass = labelClass;
     });
     template.togglecheck = togglecheck;
-    template.props = props;
+    template.inputClass = inputClass;
+    template.labelClass = labelClass;
   });
 </script>
 
