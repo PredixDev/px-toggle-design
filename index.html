@@ -15,6 +15,8 @@
   <!-- <link rel="import" href="../iron-component-page/iron-component-page.html"/> -->
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <!-- <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"> -->
+  <link rel="import" href="../px-clipboard/px-clipboard.html">
+  <link rel="import" href="../px-sass-doc-viewer/px-sass-doc-viewer.html" />
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
   </head>
 
@@ -23,7 +25,7 @@
   <!-- allow use of Polymer bindings in main document -->
   <template id="just-for-demo" is="dom-bind">
 
-    <!-- discription -->
+    <!-- description -->
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-toggle-design" target="_new">
         <iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>
@@ -32,11 +34,10 @@
       <h1 class="delta">px-toggle-design</h1>
       <div class="description-text">
         <p >
-          Description here
+          The toggle switch component is used for a user input with a binary state. The functionality resembles a checkbox, but is ideal when only one setting or option is being set. It can be set to either an “On” or an “Off” position. Clicking anywhere in the control toggles the state, or in mobile contexts a tap or directional swipe can be used. It is available in four sizes.
         </p>
       </div>
   		<div class="flex">
-  			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-toggle-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/>
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-toggle-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
   			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
   		</div>
@@ -47,16 +48,16 @@
       <section class="tab-page">
         <div class="mega-demo flex u-ph++ u-pb++">
           <div class="properties u-ph+ u-pb+ u-mt+">
-          <p class="epsilon">Properties</p>
+          <p class="epsilon">Options</p>
           <div class="u-mb-">Size:
             <div style="width: 100%;">
-              <px-dropdown id="showTimeZone" display-value="regular" bound-target="properties">
+              <px-dropdown id="toggleSize" display-value="regular" bound-target="properties">
                 <px-dropdown-content
                   items='[
-                    {"key":"one", "val": "small"},
-                    {"key":"two", "val": "regular"},
-                    {"key":"three", "val": "large"},
-                    {"key":"four", "val": "huge"}]'>
+                    {"key":"small", "val": "small"},
+                    {"key":"regular", "val": "regular"},
+                    {"key":"large", "val": "large"},
+                    {"key":"huge", "val": "huge"}]'>
                 </px-dropdown-content>
               </px-dropdown>
             </div>
@@ -66,30 +67,43 @@
         <div class="demoContainer u-mt+">
             <div class="flex flex--col">
               <div class="demo u-p+">
-                <div class="u-mb">Toggle size is <strong>{{toggleSize}}</strong></div>
+                <div class="u-mb">Toggle size is <strong>{{dropdown}}</strong></div>
                 <div class="flex u-mb-">
-                  <input id="toggleButtons" class="toggle__input toggle__input--small" type="checkbox" checked="{{toggleCheck::change}}">
-                  <label for="toggleButtons" class="toggle__label toggle__label--small"></label>
-                  <div class="u-ml-">Toggle checked is <strong>{{toggleCheck}}</strong></div>
+                  <input id="toggleInput" class$="{{inputClass}}" type="checkbox" checked="{{togglecheck::change}}">
+                  <label id="toggleLabel" for="toggleInput" class$="{{labelClass}}"></label>
+                  <div class="u-ml-">Toggle 'checked' value is {{togglecheck}}</div>
                 </div>
-                <div>
-                  <p>$inuit-enable-toggle--small : true;</p>
-                  <p>@import "px-toggle-design/_objects.toggle.scss";</p>
-                </div>
-            </div>
-            <div>
-              <px-demo-snippet
-                element-name="px-toggle-design">
-              </px-demo-snippet>
+                <h4>Import:</h4>
+                <px-clipboard copy-from="#import">
+                  <figure class="code u-mr-">
+                    <code id="import">
+                    </code>
+                  </figure>
+                </px-clipboard>
+                <h4>Usage:</h4>
+                <px-clipboard copy-from="#usage">
+                  <figure class="code u-mr-">
+                    <code id="usage">
+                      &lt;input id="toggle1" class="{{inputClass}}" type="checkbox"&gt;<br/>
+                      &lt;label for="toggle1" class="{{labelClass}}"&gt;&lt;/label&gt;
+                    </code>
+                  </figure>
+                </px-clipboard>
             </div>
           </div>
         </div>
       </div>
       <div class="apiContainer">
-        <div class="flex flex--col api u-mt++" >
-          <div>
-            <px-api-viewer source="px-toggle-design"></px-api-viewer>
-          </div>
+        <div class="flex flex--col api u-mt++">
+          <px-sass-doc-viewer
+            library-name="px-toggle-design"
+            layer="objects"
+            base-name="toggle"
+            inuit-flags='["$inuit-enable-toggle--small","$inuit-enable-toggle--large","$inuit-enable-toggle--huge"]'
+            usage-html='["<input id=\"toggle1\" class=\"toggle__input\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--small\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--small\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--large\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--large\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--huge\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--huge\"></label>"]'
+            style-variables='["$inuit-toggle-color","$inuit-toggle-background","$inuit-toggle-border","$inuit-toggle-switch","$inuit-toggle-switch-border","$inuit-toggle-switch-shadow","$inuit-toggle-background--on","$inuit-toggle-border--on"]'
+            dependencies='["https://github.com/PredixDev/px-colors-design","https://github.com/PredixDev/px-defaults-design","https://github.com/PredixDev/px-helpers-design"]'>
+          </px-sass-doc-viewer>
         </div>
       </div>
     </section>
@@ -119,11 +133,44 @@
 <script>
   document.addEventListener('WebComponentsReady', function() {
     var template = document.querySelector('template[is=dom-bind]'),
-        toggleCheck = false;
-        dropdownValue = "small"
-        toggleSize = "small";
-        template.toggleCheck = toggleCheck;
-        template.toggleSize = toggleSize;
+        togglecheck = false,
+        dropdown = document.querySelector('#toggleSize'),
+        inputClass = "toggle__input",
+        labelClass = "toggle__label",
+        importCode = '@import "px-toggle-design/_objects.toggle.scss";',
+        importClipboard = document.querySelector('#import');
+    dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
+      switch(evt.detail.key) {
+        case 'regular':
+          inputClass = 'toggle__input';
+          labelClass = 'toggle__label';
+          importCode = '@import "px-toggle-design/_objects.toggle.scss";'
+          break;
+        case 'small':
+          inputClass = 'toggle__input toggle__input--small';
+          labelClass = 'toggle__label toggle__label--small';
+          importCode = '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          break;
+        case 'large':
+          inputClass = 'toggle__input toggle__input--large';
+          labelClass = 'toggle__label toggle__label--large';
+          importCode = '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          break;
+        case 'huge':
+          inputClass = 'toggle__input toggle__input--huge';
+          labelClass = 'toggle__label toggle__label--huge';
+          importCode = '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          break;
+      }
+      template.inputClass = inputClass;
+      template.labelClass = labelClass;
+      importClipboard.innerHTML = importCode;
+    });
+    template.togglecheck = togglecheck;
+    template.inputClass = inputClass;
+    template.labelClass = labelClass;
+    template.dropdown = dropdown;
+    importClipboard.innerHTML = importCode;
   });
 </script>
 
