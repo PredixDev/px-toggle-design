@@ -25,13 +25,14 @@
   "dependencies": {
     "px-colors-design": "^0.2.16",
     "px-defaults-design": "^0.2.9",
-    "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#^0.3.5"
+    "px-helpers-design": "^0.3.5",
+    "px-sass-doc-viewer": "~0.0.2"
   },
   "devDependencies": {
     "px-buttons-design": "~0.4.13",
     "px-code-design": "^0.2.11",
     "px-iconography-design": "^0.2.10",
-    "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#^0.5.5",
+    "px-starter-kit-design": "^0.5.5",
     "px-tabs": "^0.4.12",
     "px-theme": "^1.1.2",
     "px-forms-design": "^0.3.17",
@@ -40,5 +41,9 @@
     "px-actionable-text-icons-design": "^0.0.3",
     "polymer-font-awesome": "px-polymer-font-awesome#^0.1.9",
     "px-dropdown": "^0.11.5"
+  },
+  "resolutions": {
+    "px-theme": "~1.1.2",
+    "px-typography-design": "^1.1.0"
   }
 }

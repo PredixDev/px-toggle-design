@@ -16,6 +16,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <!-- <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"> -->
   <link rel="import" href="../px-clipboard/px-clipboard.html">
+  <link rel="import" href="../px-sass-doc-viewer/px-sass-doc-viewer.html" />
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
   </head>
 
@@ -24,7 +25,7 @@
   <!-- allow use of Polymer bindings in main document -->
   <template id="just-for-demo" is="dom-bind">
 
-    <!-- discription -->
+    <!-- description -->
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-toggle-design" target="_new">
         <iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>
@@ -93,80 +94,15 @@
       </div>
       <div class="apiContainer">
         <div class="flex flex--col api u-mt++">
-
-          <div class="componentHeader">Installation</div>
-          <p>Install via command line:</p>
-          <px-clipboard copy-from="#install">
-            <figure class="code u-mr-">
-              <code id="install">
-                bower install --save https://github.build.ge.com/PXd/px-toggle-design.git
-              </code>
-            </figure>
-          </px-clipboard>
-
-          <div class="componentHeader">Enable & Import</div>
-          <p>The following flags are available and, if necessary, should be set to true prior to the import statement below.</p>
-          <px-clipboard copy-from="#enable">
-            <figure class="code u-mr-">
-              <code id="enable">
-                $inuit-enable-toggle--small : true;<br/>
-                $inuit-enable-toggle--large : true;<br/>
-                $inuit-enable-toggle--huge : true;
-              </code>
-            </figure>
-          </px-clipboard>
-          <p>Include the optional flags above and the required import below in your Sass file in the <strong>Objects</strong> layer: <a href="https://github.com/PredixDev/px-getting-started#import-order" target="_blank"><iron-icon icon="fa:fa-question-circle" class="u-mh--"></iron-icon>What's this?</a></p>
-          <px-clipboard copy-from="#import2">
-            <figure class="code u-mr-">
-              <code id="import2">
-                @import "px-toggle-design/_objects.toggle.scss";
-              </code>
-            </figure>
-          </px-clipboard>
-
-          <div class="componentHeader">Usage</div>
-          <p>Include the following HTML in your main application to use the element:</p>
-          <px-clipboard copy-from="#usage2">
-            <figure class="code u-mr-">
-              <code id="usage2">
-                &lt;input id="toggle1" class="toggle__input" type="checkbox"&gt;<br/>
-                &lt;label for="toggle1" class="toggle__label"&gt;&lt;/label&gt;<br/><br/>
-                &lt;input id="toggle1" class="toggle__input toggle__input--small" type="checkbox"&gt;<br/>
-                &lt;label for="toggle1" class="toggle__label toggle__label--small"&gt;&lt;/label&gt;<br/><br/>
-                &lt;input id="toggle1" class="toggle__input toggle__input--large" type="checkbox"&gt;<br/>
-                &lt;label for="toggle1" class="toggle__label toggle__label--large"&gt;&lt;/label&gt;<br/><br/>
-                &lt;input id="toggle1" class="toggle__input toggle__input--huge" type="checkbox"&gt;<br/>
-                &lt;label for="toggle1" class="toggle__label toggle__label--huge"&gt;&lt;/label&gt;<br/><br/>
-              </code>
-            </figure>
-          </px-clipboard>
-
-          <div class="componentHeader">Customization</div>
-          <p>The following variables are available to customize the style of this element:</p>
-          <px-clipboard copy-from="#customize">
-            <figure class="code u-mr-">
-              <code id="customize">
-                $inuit-toggle-color<br/>
-                $inuit-toggle-background<br/>
-                $inuit-toggle-border<br/>
-                $inuit-toggle-switch<br/>
-                $inuit-toggle-switch-border<br/>
-                $inuit-toggle-switch-shadow<br/>
-                $inuit-toggle-background--on<br/>
-                $inuit-toggle-border--on
-              </code>
-            </figure>
-          </px-clipboard>
-
-          <div class="componentHeader">Dependencies</div>
-          <p>This module depends on the following modules (automatically included with Bower install):
-            <ul>
-              <li><a href="https://github.com/PredixDev/px-colors-design" target="_blank">px-colors-design</a></li>
-              <li><a href="https://github.com/PredixDev/px-defaults-design" target="_blank">px-defaults-design</a></li>
-              <li><a href="https://github.com/PredixDev/px-helpers-design" target="_blank">px-helpers-design</a></li>
-            </ul>
-          </p>
-
+          <px-sass-doc-viewer
+            library-name="px-toggle-design"
+            layer="objects"
+            base-name="toggle"
+            inuit-flags='["$inuit-enable-toggle--small","$inuit-enable-toggle--large","$inuit-enable-toggle--huge"]'
+            usage-html='["<input id=\"toggle1\" class=\"toggle__input\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--small\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--small\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--large\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--large\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--huge\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--huge\"></label>"]'
+            style-variables='["$inuit-toggle-color","$inuit-toggle-background","$inuit-toggle-border","$inuit-toggle-switch","$inuit-toggle-switch-border","$inuit-toggle-switch-shadow","$inuit-toggle-background--on","$inuit-toggle-border--on"]'
+            dependencies='["https://github.com/PredixDev/px-colors-design","https://github.com/PredixDev/px-defaults-design","https://github.com/PredixDev/px-helpers-design"]'>
+          </px-sass-doc-viewer>
         </div>
       </div>
     </section>
@@ -200,37 +136,39 @@
         dropdown = document.querySelector('#toggleSize'),
         inputClass = "toggle__input",
         labelClass = "toggle__label",
-        importCode = document.querySelector('#import');
+        importCode = '@import "px-toggle-design/_objects.toggle.scss";',
+        importClipboard = document.querySelector('#import');
     dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
       switch(evt.detail.key) {
         case 'regular':
           inputClass = 'toggle__input';
           labelClass = 'toggle__label';
-          importCode.innerHTML = '@import "px-toggle-design/_objects.toggle.scss";'
+          importCode = '@import "px-toggle-design/_objects.toggle.scss";'
           break;
         case 'small':
           inputClass = 'toggle__input toggle__input--small';
           labelClass = 'toggle__label toggle__label--small';
-          importCode.innerHTML = '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          importCode = '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
           break;
         case 'large':
           inputClass = 'toggle__input toggle__input--large';
           labelClass = 'toggle__label toggle__label--large';
-          importCode.innerHTML = '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          importCode = '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
           break;
         case 'huge':
           inputClass = 'toggle__input toggle__input--huge';
           labelClass = 'toggle__label toggle__label--huge';
-          importCode.innerHTML = '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
+          importCode = '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
           break;
       }
       template.inputClass = inputClass;
       template.labelClass = labelClass;
+      importClipboard.innerHTML = importCode;
     });
     template.togglecheck = togglecheck;
     template.inputClass = inputClass;
     template.labelClass = labelClass;
-    importCode.innerHTML = '@import "px-toggle-design/_objects.toggle.scss";'
+    importClipboard.innerHTML = importCode;
   });
 </script>
 
