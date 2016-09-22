@@ -83,8 +83,6 @@
                 <px-clipboard copy-from="#usage">
                   <figure class="code u-mr-">
                     <code id="usage">
-                      &lt;input id="toggle1" class="{{inputClass}}" type="checkbox"&gt;<br/>
-                      &lt;label for="toggle1" class="{{labelClass}}"&gt;&lt;/label&gt;
                     </code>
                   </figure>
                 </px-clipboard>
@@ -137,38 +135,48 @@
         inputClass = "toggle__input",
         labelClass = "toggle__label",
         importCode = '@import "px-toggle-design/_objects.toggle.scss";',
-        importClipboard = document.querySelector('#import');
-    dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
-      switch(evt.detail.key) {
-        case 'regular':
-          inputClass = 'toggle__input';
-          labelClass = 'toggle__label';
-          importCode = '@import "px-toggle-design/_objects.toggle.scss";'
-          break;
-        case 'small':
-          inputClass = 'toggle__input toggle__input--small';
-          labelClass = 'toggle__label toggle__label--small';
-          importCode = '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-        case 'large':
-          inputClass = 'toggle__input toggle__input--large';
-          labelClass = 'toggle__label toggle__label--large';
-          importCode = '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-        case 'huge':
-          inputClass = 'toggle__input toggle__input--huge';
-          labelClass = 'toggle__label toggle__label--huge';
-          importCode = '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-      }
-      template.inputClass = inputClass;
-      template.labelClass = labelClass;
-      importClipboard.innerHTML = importCode;
-    });
+        usageCode = '&lt;input id="toggle1" class="toggle__input" type="checkbox"&gt;<br/>&lt;label for="toggle1" class="toggle__label"&gt;&lt;/label&gt;',
+        importClipboard = document.querySelector('#import'),
+        usageClipboard = document.querySelector('#usage');
     template.togglecheck = togglecheck;
     template.inputClass = inputClass;
     template.labelClass = labelClass;
     importClipboard.innerHTML = importCode;
+    usageClipboard.innerHTML = usageCode;
+
+    dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
+      var key = evt.detail.key,
+          options = {
+            'regular': {
+              'inputClass' : 'toggle__input',
+              'labelClass' : 'toggle__label',
+              'importCode' : '@import "px-toggle-design/_objects.toggle.scss";',
+              'usageCode' : '&lt;input id="toggle1" class="toggle__input" type="checkbox"&gt;<br/>&lt;label for="toggle1" class="toggle__label"&gt;&lt;/label&gt;'
+            },
+            'small': {
+              'inputClass' : 'toggle__input toggle__input--small',
+              'labelClass' : 'toggle__label toggle__label--small',
+              'importCode' : '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";',
+              'usageCode' : '&lt;input id="toggle1" class="toggle__input toggle__input--small" type="checkbox"&gt;<br/>&lt;label for="toggle1" class="toggle__label toggle__label--small"&gt;&lt;/label&gt;'
+            },
+            'large': {
+              'inputClass' : 'toggle__input toggle__input--large',
+              'labelClass' : 'toggle__label toggle__label--large',
+              'importCode' : '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";',
+              'usageCode' : '&lt;input id="toggle1" class="toggle__input toggle__input--large" type="checkbox"&gt;<br/>&lt;label for="toggle1" class="toggle__label toggle__label--large"&gt;&lt;/label&gt;'
+            },
+            'huge': {
+              'inputClass' : 'toggle__input toggle__input--huge',
+              'labelClass' : 'toggle__label toggle__label--huge',
+              'importCode' : '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";',
+              'usageCode' : '&lt;input id="toggle1" class="toggle__input toggle__input--huge" type="checkbox"&gt;<br/>&lt;label for="toggle1" class="toggle__label toggle__label--huge"&gt;&lt;/label&gt;'
+            }
+          };
+      template.inputClass = options[key].inputClass;
+      template.labelClass = options[key].labelClass;
+      importClipboard.innerHTML = options[key].importCode;
+      usageClipboard.innerHTML = options[key].usageCode;
+    });
   });
 </script>
 
