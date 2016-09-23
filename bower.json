@@ -26,7 +26,7 @@
     "px-colors-design": "^0.2.16",
     "px-defaults-design": "^0.2.9",
     "px-helpers-design": "^0.3.5",
-    "px-sass-doc-viewer": "~0.0.2"
+    "px-sass-doc-viewer": "~0.0.4"
   },
   "devDependencies": {
     "px-buttons-design": "~0.4.13",

@@ -1,4 +1,3 @@
-<!-- build:remove -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,172 +7,128 @@
   <link rel="stylesheet" type="text/css" href="css/px-toggle-design-demo.css"/>
   <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
   <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../px-theme/px-theme.html"/>
-  <link rel="import" href="./px-dropdown/px-dropdown.html"/>
-  <!-- <link rel="import" href="../px-api-viewer/px-api-viewer.html" /> -->
-  <link rel="import" href="../px-tabs/px-tab-set.html" />
-  <!-- <link rel="import" href="../iron-component-page/iron-component-page.html"/> -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <!-- <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"> -->
-  <link rel="import" href="../px-clipboard/px-clipboard.html">
+  <link rel="import" href="../px-theme/px-theme.html" />
+  <link rel="import" href="../px-dropdown/px-dropdown.html" />
   <link rel="import" href="../px-sass-doc-viewer/px-sass-doc-viewer.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
-  </head>
+</head>
 
 <body>
+
   <!-- Wrap elements with auto-binding template to -->
   <!-- allow use of Polymer bindings in main document -->
   <template id="just-for-demo" is="dom-bind">
 
-    <!-- description -->
+    <!-- discription -->
     <div class="hero u-p++ text--shadow">
-      <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-toggle-design" target="_new">
-        <iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>
-        View on Github
+      <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-sass-doc-viewer" target="_blank">
+        <iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github
       </a>
-      <h1 class="delta">px-toggle-design</h1>
+      <h1 class="delta">px-sass-doc-viewer</h1>
       <div class="description-text">
-        <p >
-          The toggle switch component is used for a user input with a binary state. The functionality resembles a checkbox, but is ideal when only one setting or option is being set. It can be set to either an “On” or an “Off” position. Clicking anywhere in the control toggles the state, or in mobile contexts a tap or directional swipe can be used. It is available in four sizes.
-        </p>
+        Element providing documentation for a requested Predix UI Sass component (design library).
       </div>
-  		<div class="flex">
-  			<img class="u-mr--" src="https://img.shields.io/bower/v/px-toggle-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
-  			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-toggle-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
-  		</div>
-  	</div>
-
-    <!-- mega demo -->
-    <div style="position: relative;" class="u-pb++ flex flex--col" id="defaultTab">
-      <section class="tab-page">
-        <div class="mega-demo flex u-ph++ u-pb++">
-          <div class="properties u-ph+ u-pb+ u-mt+">
-          <p class="epsilon">Options</p>
-          <div class="u-mb-">Size:
-            <div style="width: 100%;">
-              <px-dropdown id="toggleSize" display-value="regular" bound-target="properties">
-                <px-dropdown-content
-                  items='[
-                    {"key":"small", "val": "small"},
-                    {"key":"regular", "val": "regular"},
-                    {"key":"large", "val": "large"},
-                    {"key":"huge", "val": "huge"}]'>
-                </px-dropdown-content>
-              </px-dropdown>
-            </div>
-          </div>
-        </div>
-
-        <div class="demoContainer u-mt+">
-            <div class="flex flex--col">
-              <div class="demo u-p+">
-                <div class="u-mb">Toggle size is <strong>{{dropdown}}</strong></div>
-                <div class="flex u-mb-">
-                  <input id="toggleInput" class$="{{inputClass}}" type="checkbox" checked="{{togglecheck::change}}">
-                  <label id="toggleLabel" for="toggleInput" class$="{{labelClass}}"></label>
-                  <div class="u-ml-">Toggle 'checked' value is {{togglecheck}}</div>
-                </div>
-                <h4>Import:</h4>
-                <px-clipboard copy-from="#import">
-                  <figure class="code u-mr-">
-                    <code id="import">
-                    </code>
-                  </figure>
-                </px-clipboard>
-                <h4>Usage:</h4>
-                <px-clipboard copy-from="#usage">
-                  <figure class="code u-mr-">
-                    <code id="usage">
-                      &lt;input id="toggle1" class="{{inputClass}}" type="checkbox"&gt;<br/>
-                      &lt;label for="toggle1" class="{{labelClass}}"&gt;&lt;/label&gt;
-                    </code>
-                  </figure>
-                </px-clipboard>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="apiContainer">
-        <div class="flex flex--col api u-mt++">
-          <px-sass-doc-viewer
-            library-name="px-toggle-design"
-            layer="objects"
-            base-name="toggle"
-            inuit-flags='["$inuit-enable-toggle--small","$inuit-enable-toggle--large","$inuit-enable-toggle--huge"]'
-            usage-html='["<input id=\"toggle1\" class=\"toggle__input\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--small\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--small\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--large\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--large\"></label>","","<input id=\"toggle1\" class=\"toggle__input toggle__input--huge\" type=\"checkbox\">","<label for=\"toggle1\" class=\"toggle__label toggle__label--huge\"></label>"]'
-            style-variables='["$inuit-toggle-color","$inuit-toggle-background","$inuit-toggle-border","$inuit-toggle-switch","$inuit-toggle-switch-border","$inuit-toggle-switch-shadow","$inuit-toggle-background--on","$inuit-toggle-border--on"]'
-            dependencies='["https://github.com/PredixDev/px-colors-design","https://github.com/PredixDev/px-defaults-design","https://github.com/PredixDev/px-helpers-design"]'>
-          </px-sass-doc-viewer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <footer class="footer flex flex--center">
-    <div class="footer__container u-pv++">
-      <div>
-        <a href="https://ge.com/digital" >
-          <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
-        </a>
-      </div>
-      <div class="footer__list">
-        <ul class="list-inline list-inline--delimited">
-          <li>
-            <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
-          </li>
-          <li>
-            <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
-          </li>
-          <li>Copyright &copy; 2016 General Electric Company. All rights reserved.</li>
-        </ul>
+      <div class="flex">
+        <img class="u-mr-- " src="https://img.shields.io/travis/PredixDev/px-sass-doc-viewer.svg?style=flat-square" alt="Travis"  onerror="this.style.display='none'"/>
+        <img class="u-mr--" src="https://img.shields.io/bower/v/px-sass-doc-viewer.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'" />
+        <img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-sass-doc-viewer.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'" />
       </div>
     </div>
-  </footer>
-</template>
+    <br />
 
-<script>
-  document.addEventListener('WebComponentsReady', function() {
-    var template = document.querySelector('template[is=dom-bind]'),
-        togglecheck = false,
-        dropdown = document.querySelector('#toggleSize'),
-        inputClass = "toggle__input",
-        labelClass = "toggle__label",
-        importCode = '@import "px-toggle-design/_objects.toggle.scss";',
-        importClipboard = document.querySelector('#import');
-    dropdown.addEventListener('dropdown_content_value_changed', function(evt) {
-      switch(evt.detail.key) {
-        case 'regular':
-          inputClass = 'toggle__input';
-          labelClass = 'toggle__label';
-          importCode = '@import "px-toggle-design/_objects.toggle.scss";'
-          break;
-        case 'small':
-          inputClass = 'toggle__input toggle__input--small';
-          labelClass = 'toggle__label toggle__label--small';
-          importCode = '$inuit-enable-toggle--small : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-        case 'large':
-          inputClass = 'toggle__input toggle__input--large';
-          labelClass = 'toggle__label toggle__label--large';
-          importCode = '$inuit-enable-toggle--large : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-        case 'huge':
-          inputClass = 'toggle__input toggle__input--huge';
-          labelClass = 'toggle__label toggle__label--huge';
-          importCode = '$inuit-enable-toggle--huge : true;<br/>@import "px-toggle-design/_objects.toggle.scss";';
-          break;
-      }
-      template.inputClass = inputClass;
-      template.labelClass = labelClass;
-      importClipboard.innerHTML = importCode;
+    <px-sass-doc-viewer
+      id = "px-sass-doc"
+      library-name = "px-toggle-design"
+      layer = "objects"
+      base-name = "toggle"
+      inuit-flags = '["$inuit-enable-toggle--small",
+                     "$inuit-enable-toggle--large",
+                     "$inuit-enable-toggle--huge"]'
+      usage-html = "{{usageHtml}}"
+      style-variables = '["$inuit-toggle-color",
+              "$inuit-toggle-background",
+              "$inuit-toggle-border",
+              "$inuit-toggle-switch",
+              "$inuit-toggle-switch-border",
+              "$inuit-toggle-switch-shadow",
+              "$inuit-toggle-background--on",
+              "$inuit-toggle-border--on"]'
+      dependencies = '["https://github.com/PredixDev/px-colors-design","https://github.com/PredixDev/px-defaults-design","https://github.com/PredixDev/px-helpers-design"]'
+      demo-config = '[{
+          "elem": "input",
+          "id": "toggleInput",
+          "class": "toggle__input",
+          "extra": "type=\"checkbox\""
+        },{
+          "elem": "label",
+          "id": "toggleLabel",
+          "class": "toggle__label",
+          "extra": "for=\"toggleInput\""
+        }]'
+      options-array = "{{optionsArray}}">
+    </px-sass-doc-viewer>
+
+    <footer class="footer flex flex--center">
+      <div class="footer__container u-pv++">
+        <div>
+          <a href="https://ge.com/digital" >
+            <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
+          </a>
+        </div>
+        <div class="footer__list">
+          <ul class="list-inline list-inline--delimited">
+            <li>
+              <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
+            </li>
+            <li>
+              <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
+            </li>
+            <li>Copyright &copy; 2016 General Electric Company. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </template>
+  <script>
+    window.addEventListener('WebComponentsReady', function() {
+      var template = document.querySelector('template[is=dom-bind]'),
+          usageHtml = ["<input id=toggle1 class=toggle__input type=checkbox>",
+                  "<label for=toggle1 class=toggle__label></label>",
+                  "",
+                  "<input id=toggle1 class=\"toggle__input toggle__input--small\" type=checkbox>",
+                  "<label for=toggle1 class=\"toggle__label toggle__label--small\"></label>",
+                  "",
+                  "<input id=toggle1 class=\"toggle__input toggle__input--large\" type=checkbox>",
+                  "<label for=toggle1 class=\"toggle__label toggle__label--large\"></label>",
+                  "",
+                  "<input id=toggle1 class=\"toggle__input toggle__input--huge\" type=checkbox>",
+                  "<label for=toggle1 class=\"toggle__label toggle__label--huge\"></label>"],
+          dropdownItems = [{
+            "key":["toggle__input toggle__input--small","toggle__label toggle__label--small"],
+            "val": "small"
+          },{
+            "key":["toggle__input","toggle__label"],
+            "val": "regular"
+          },{
+            "key":["toggle__input toggle__input--large","toggle__label toggle__label--large"],
+            "val": "large"
+          },{
+            "key":["toggle__input toggle__input--huge","toggle__label toggle__label--huge"],
+            "val": "huge"
+          }]
+          optionsArray = [{
+            "label": "Size",
+            "type": "dropdown",
+            "id": "sizeDropdown",
+            "dropdownItems": dropdownItems,
+            "displayValue": "regular"
+          }];
+      template.selected = "0";
+      template.optionsArray = optionsArray;
+      template.usageHtml = usageHtml;
     });
-    template.togglecheck = togglecheck;
-    template.inputClass = inputClass;
-    template.labelClass = labelClass;
-    template.dropdown = dropdown;
-    importClipboard.innerHTML = importCode;
-  });
-</script>
-
+  </script>
 </body>
 </html>
-<!-- /build -->
