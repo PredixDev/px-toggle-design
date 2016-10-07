@@ -40,7 +40,7 @@
     "px-headings-design": "^0.2.14",
     "px-actionable-text-icons-design": "^0.0.3",
     "polymer-font-awesome": "px-polymer-font-awesome#^0.1.9",
-    "px-dropdown": "^0.11.5"
+    "px-sass-doc": "git://github.com/davidrleonard/px-sass-doc.git#^0.1.0"
   },
   "resolutions": {
     "px-theme": "~1.1.2",
