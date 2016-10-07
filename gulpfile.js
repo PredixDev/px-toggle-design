@@ -10,7 +10,9 @@ const browserSync = require('browser-sync').create();
 const gulpif = require('gulp-if');
 const combiner = require('stream-combiner2');
 const bump = require('gulp-bump');
-const argv = require('yargs').argv;
+const sassdoc = require('sassdoc');
+const fs = require('fs');
+const argv = require('yargs').argv
 
 const sassOptions = {
   importer: importOnce,
@@ -84,4 +86,16 @@ gulp.task('bump:major', function(){
 
 gulp.task('default', function(callback) {
   gulpSequence('clean', 'sass')(callback);
+});
+
+/**
+* Special task just for Sass design repos. Builds the Sassdoc documentation and
+* spits it out as `sassdoc.json`.
+*/
+gulp.task('sassdoc', function(){
+  gulp.src(['./*.scss'])
+    .pipe(sassdoc.parse())
+    .on('data', function(data){
+      fs.writeFileSync('sassdoc.json', JSON.stringify(data,null,4));
+    });
 });
