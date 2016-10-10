@@ -27,17 +27,7 @@
     "px-helpers-design": "^0.3.5"
   },
   "devDependencies": {
-    "px-buttons-design": "~0.4.26",
-    "px-code-design": "^0.2.11",
-    "px-iconography-design": "^0.2.0",
-    "px-starter-kit-design": "^0.6.0",
-    "px-tabs": "^0.5.2",
-    "px-theme": "^1.1.2",
-    "px-forms-design": "^0.3.17",
-    "px-list-inline-design": "^0.2.11",
-    "px-headings-design": "^0.2.14",
-    "px-actionable-text-icons-design": "^0.0.3",
-    "px-polymer-font-awesome": "^0.1.9",
+    "px-starter-kit-design": "~0.6.0",
     "px-sass-doc": "^0.1.7"
   }
 }
