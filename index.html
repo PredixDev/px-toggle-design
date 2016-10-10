@@ -46,8 +46,8 @@
 
 <!-- 3: Make HTML Demo -->
 <section data-slot="htmlDemo">
-<input id="exampleToggle" class$="{{inputClasses}}" type="checkbox" />
-<label for="exampleToggle" class$="{{labelClasses}}"></label>
+<input id="example" class$="{{inputClasses}}" type="checkbox" checked$="{{togglesChecked::change}}" />
+<label for="example" class$="{{labelClasses}}"></label>
 </section>
 
 <!-- 4: Set Import Slot -->
@@ -73,12 +73,9 @@
 
 <!-- 5: Set Usage Info -->
 <section data-slot="usage">
-Toggles are just fancy checkboxes. After you import the toggle library, you can add classes to an `<input>` tag and `<label>` tag to create your toggle element. Toggles look like this:
+Toggles are just fancy checkboxes. After you import the toggle library, you can add classes to an `<input>` tag and `<label>` tag to create your toggle element.
 
-<input id="simpleToggle" class="toggle__input" type="checkbox">
-<label for="simpleToggle" class="toggle__label"></label>
-
-You can create the toggle above with the following code:
+You can create a basic toggle with the following code:
 
 ```
 <!-- HTML and CSS get the job done, no JavaScript required -->
@@ -178,6 +175,14 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
 
     return (strings.join("\n") + "\n@import 'px-toggle-design/_objects.toggle.scss';").trim();
   };
+
+  window.addEventListener('WebComponentsReady', function(e) {
+    template.togglesChecked = false;
+    template.listen(template.$.example, 'tap', 'toggleToggles');
+    template.toggleToggles = function(evt) {
+      template.togglesChecked = !template.togglesChecked;
+    }
+  });
 </script>
 </body>
 </html>

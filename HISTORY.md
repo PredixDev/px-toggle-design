@@ -3,7 +3,6 @@ v0.2.13
 * Added interactive documentation
 * Updated Sassdoc comments
 
-
 v0.2.12
 ==============================
 * Added oss_notice to bower ignore and updated readme

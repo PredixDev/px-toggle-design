@@ -1,7 +1,7 @@
 {
   "name": "px-toggle-design",
-  "version": "0.2.12",
-  "description": "Toggle control styles for Predix UI",
+  "version": "0.2.13",
+  "description": "Toggle is a simple on/off switch. It's created with CSS applied to a checkbox and label. Use it to create simple UI elements that enable and disable things.",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
