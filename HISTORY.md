@@ -1,3 +1,7 @@
+v0.2.14
+==============================
+* Added new Travis deploy key
+
 v0.2.13
 ==============================
 * Added interactive documentation
