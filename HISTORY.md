@@ -1,3 +1,7 @@
+v0.2.15
+==============================
+* fixed grammer mistake
+
 v0.2.14
 ==============================
 * Added new Travis deploy key
