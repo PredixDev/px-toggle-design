@@ -1,6 +1,6 @@
 {
     "name": "px-toggle-design",
-    "version": "0.2.23",
+    "version": "1.0.0",
     "authors": [
         "General Electric"
     ],
@@ -19,7 +19,12 @@
         "bower_components",
         "test",
         "tests",
-        "OSS_Notice.pdf"
+        "OSS_Notice.pdf",
+        "CONTRIBUTING.md",
+        "HISTORY.md",
+        "LICENSE.md",
+        "README.md",
+        "scripts"
     ],
     "dependencies": {
         "px-colors-design": "^0.2.20",
