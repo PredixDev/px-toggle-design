@@ -1,3 +1,7 @@
+v0.2.23
+==================
+* removed css vars
+
 v0.2.22
 ==================
 * shortened description to 140 char limit
