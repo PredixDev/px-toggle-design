@@ -7,13 +7,13 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- Boilerplate: Import Libraries -->
-  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="css/px-toggle-design-demo-styles.html">
+  <style include="px-toggle-design-demo-styles" is="custom-style"></style>
   <link rel="import" href="../px-theme/px-theme-styles.html">
   <style include="px-theme-styles" is="custom-style"></style>
   <link rel="import" href="../px-sass-doc/px-sass-doc.html" />
 
-  <!-- 0: Import Module Styles -->
-  <link rel="stylesheet" type="text/css" href="css/px-toggle-design-demo.css" />
 </head>
 <body>
 <template id="just-for-demo" is="dom-bind">
@@ -183,6 +183,17 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
       template.togglesChecked = !template.togglesChecked;
     }
   });
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
 </script>
 </body>
 </html>

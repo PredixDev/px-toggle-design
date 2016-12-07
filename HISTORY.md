@@ -1,3 +1,7 @@
+v1.0.1
+==================
+* Move to style modules and service worker for docs.
+
 v1.0.0
 ==================
 * re-added css vars major
