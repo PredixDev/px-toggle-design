@@ -1,3 +1,7 @@
+v1.1.3
+=================
+* fix sizing per issue #1
+
 v1.1.2
 =================
 * Update colors dependency

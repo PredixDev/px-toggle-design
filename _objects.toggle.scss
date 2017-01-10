@@ -101,6 +101,7 @@ $inuit-enable-toggle--huge      : false !default;
   position: relative;
   display: block;
   width: $inuit-base-spacing-unit--huge * 2;
+  min-width: $inuit-base-spacing-unit--huge * 2;
   height: $inuit-base-spacing-unit--huge;
   border-radius: $inuit-base-spacing-unit--huge;
   padding: 1px;
@@ -160,6 +161,7 @@ $inuit-enable-toggle--huge      : false !default;
   .#{$inuit-toggle-namespace}toggle__label--small,
   %#{$inuit-toggle-namespace}toggle__label--small {
     width: $inuit-base-spacing-unit--large * 2;
+    min-width: $inuit-base-spacing-unit--large * 2;
     height: $inuit-base-spacing-unit--large;
     border-radius: $inuit-base-spacing-unit--large;
     &:before {
@@ -199,6 +201,7 @@ $inuit-enable-toggle--huge      : false !default;
   .#{$inuit-toggle-namespace}toggle__label--large,
   %#{$inuit-toggle-namespace}toggle__label--large {
     width: $inuit-base-spacing-unit--large * 4;
+    min-width: $inuit-base-spacing-unit--large * 4;
     height: $inuit-base-spacing-unit--large * 2;
     border-radius: $inuit-base-spacing-unit--large * 2;
     &:before {
@@ -238,6 +241,7 @@ $inuit-enable-toggle--huge      : false !default;
   .#{$inuit-toggle-namespace}toggle__label--huge,
   %#{$inuit-toggle-namespace}toggle__label--huge {
     width: $inuit-base-spacing-unit--huge * 4;
+    min-width: $inuit-base-spacing-unit--huge * 4;
     height: $inuit-base-spacing-unit--huge * 2;
     border-radius: $inuit-base-spacing-unit--huge * 2;
     &:before {
