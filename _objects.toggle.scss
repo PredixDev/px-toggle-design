@@ -56,6 +56,25 @@ $inuit-toggle-background--on    : var(--px-toggle-background-color--on, $select-
 /// @type Color [default]]
 $inuit-toggle-border--on        : var(--px-toggle-border-color--on, $select-blue-hover) !default;
 
+/// Disabled background color
+/// @group px-toggle-design:variables:style
+/// @type Color [default]
+$inuit-toggle-disabled-background                      : $white !default;
+
+/// Disabled checked background color
+/// @group px-toggle-design:variables:style
+/// @type Color [default]
+$inuit-toggle-checked-disabled-background              : $gray3 !default;
+
+/// Disabled border color
+/// @group px-toggle-design:variables:style
+/// @type Color [default]
+$inuit-toggle-disabled-border-color                    : $gray3 !default;
+
+/// Produce CSS for disabled toggle
+/// @group px-toggle-design:variables:flag
+/// @type Boolean [default]
+$inuit-enable-toggle--disabled                         : false !default;
 
 /// Generates the CSS for small toggles if enabled.
 ///
@@ -135,6 +154,48 @@ $inuit-enable-toggle--huge      : false !default;
     box-shadow: $inuit-toggle-switch-shadow;
     background-color: $inuit-toggle-switch;
     transition: margin .4s, background .4s;
+  }
+}
+
+/// Disabled toggle
+@if ($inuit-enable-toggle--disabled == true) {
+
+  .#{$inuit-toggle-namespace}toggle__input,
+  %#{$inuit-toggle-namespace}toggle__input {
+    &:checked + {
+      .#{$inuit-toggle-namespace}toggle--disabled,
+      %#{$inuit-toggle-namespace}toggle--disabled {
+        background-color: var(--px-toggle-checked-disabled-background, $inuit-toggle-checked-disabled-background);
+        &:before {
+          //checked background
+          background-color: var(--px-toggle-checked-disabled-background, $inuit-toggle-checked-disabled-background);
+        }
+        &:after {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .#{$inuit-toggle-namespace}toggle--disabled,
+  %#{$inuit-toggle-namespace}toggle--disabled,
+  .label[disabled] {
+    background-color: var(--px-toggle-disabled-border-color, $inuit-toggle-disabled-border-color) !important;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:before {
+      background-color: var(--px-toggle-disabled-background, $inuit-toggle-disabled-background);
+      box-shadow: none;
+      cursor: not-allowed;
+      // pointer-events: none;
+    }
+    &:after {
+      box-shadow: none;
+      border: 1px solid var(--px-toggle-disabled-border-color, $inuit-toggle-disabled-border-color);
+    }
   }
 }
 

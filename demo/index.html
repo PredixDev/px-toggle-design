@@ -37,6 +37,12 @@
   default-choice="regular (default)">
 </px-sass-doc-option>
 
+<px-sass-doc-option
+  option-name="Disabled"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+
 <!-- 3: Make HTML Demo -->
 <section data-slot="demoHTML">
 <input id="example" class$="{{inputClasses}}" type="checkbox" checked$="{{togglesChecked::change}}" />
@@ -180,6 +186,7 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
       if (opts.Size === "small")    strings.push("toggle__label--small");
       if (opts.Size === "large")    strings.push("toggle__label--large");
       if (opts.Size === "huge")     strings.push("toggle__label--huge");
+      if (opts.Disabled)            strings.push("toggle--disabled");
 
       return ("toggle__label " + strings.join(" ")).trim();
     },
