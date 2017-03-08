@@ -190,7 +190,7 @@ $inuit-enable-toggle--huge      : false !default;
       background-color: var(--px-toggle-disabled-background, $inuit-toggle-disabled-background);
       box-shadow: none;
       cursor: not-allowed;
-      // pointer-events: none;
+      pointer-events: none;
     }
     &:after {
       box-shadow: none;
