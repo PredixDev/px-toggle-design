@@ -1,3 +1,7 @@
+v1.2.0
+==================
+* add disabled toggle styles
+
 v1.1.6
 ==================
 * update demo page using px-demo classes
