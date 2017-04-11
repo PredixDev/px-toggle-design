@@ -48,13 +48,13 @@ $inuit-toggle-border            : var(--px-toggle-border-color--off, $gray5) !de
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]]
-$inuit-toggle-background--on    : var(--px-toggle-background-color--on, $select-blue-default) !default;
+$inuit-toggle-background--on    : var(--px-toggle-background-color--on, $select-default) !default;
 
 /// Sets the toggle border color. This color is in use when the toggle is on/activated.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]]
-$inuit-toggle-border--on        : var(--px-toggle-border-color--on, $select-blue-hover) !default;
+$inuit-toggle-border--on        : var(--px-toggle-border-color--on, $select-hover) !default;
 
 /// Disabled background color
 /// @group px-toggle-design:variables:style

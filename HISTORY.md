@@ -1,3 +1,7 @@
+v2.0.0
+==================
+* Major bump to pick up redesigned sub dependencies
+
 v1.2.0
 ==================
 * add disabled toggle styles
