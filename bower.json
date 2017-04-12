@@ -31,12 +31,12 @@
     "LICENSE.md"
   ],
   "dependencies": {
-    "px-colors-design": "^1.0.1",
-    "px-defaults-design": "^1.0.2",
-    "px-helpers-design": "^1.0.1"
+    "px-colors-design": "^1.0.0",
+    "px-defaults-design": "^1.0.0",
+    "px-helpers-design": "^1.0.0"
   },
   "devDependencies": {
-    "px-starter-kit-design": "^1.0.1",
-    "px-sass-doc": "^1.0.1"
+    "px-starter-kit-design": "^1.0.0",
+    "px-sass-doc": "^1.0.0"
   }
 }
