@@ -24,37 +24,37 @@ $inuit-toggle-switch            : var(--px-toggle-switch-color, $white) !default
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-switch-border     : var(--px-toggle-switch-border-color, $gray2) !default;
+$inuit-toggle-switch-border     : var(--px-toggle-switch-border-color, $gray8) !default;
 
 /// Sets the toggle switch shadow color.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color | String [default]
-$inuit-toggle-switch-shadow     : 0px 1px 0px var(--px-toggle-switch-shadow-color, rgba($black, .15)) !default;
+$inuit-toggle-switch-shadow     : 0px 1px 2px var(--px-toggle-switch-shadow-color, rgba($black, .15)) !default;
 
 /// Sets the toggle background color. This color is in use when the toggle is off/deactivated.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-background        : var(--px-toggle-backgound-color--off, $gray4) !default;
+$inuit-toggle-background        : var(--px-toggle-backgound-color--off, $white) !default;
 
 /// Sets the toggle border color. This color is in use when the toggle is off/deactivated.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-border            : var(--px-toggle-border-color--off, $gray5) !default;
+$inuit-toggle-border            : var(--px-toggle-border-color--off, $gray8) !default;
 
 /// Sets the toggle background color. This color is in use when the toggle is on/activated.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]]
-$inuit-toggle-background--on    : var(--px-toggle-background-color--on, $select-default) !default;
+$inuit-toggle-background--on    : var(--px-toggle-background-color--on, $primary-default) !default;
 
 /// Sets the toggle border color. This color is in use when the toggle is on/activated.
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]]
-$inuit-toggle-border--on        : var(--px-toggle-border-color--on, $select-hover) !default;
+$inuit-toggle-border--on        : var(--px-toggle-border-color--on, $primary-default) !default;
 
 /// Disabled background color
 /// @group px-toggle-design:variables:style
@@ -110,7 +110,7 @@ $inuit-enable-toggle--disabled   : false !default;
         background-color: $inuit-toggle-background--on;
       }
       &:after {
-        margin-left: $inuit-base-spacing-unit--huge;
+        margin-left: calc(#{$inuit-base-spacing-unit--large} + 2px);
       }
     }
   }
@@ -120,9 +120,9 @@ $inuit-enable-toggle--disabled   : false !default;
 %#{$inuit-toggle-namespace}toggle__label {
   position: relative;
   display: block;
-  width: $inuit-base-spacing-unit--huge * 2;
-  min-width: $inuit-base-spacing-unit--huge * 2;
-  height: $inuit-base-spacing-unit--huge;
+  width: $inuit-base-spacing-unit--large * 2;
+  min-width: $inuit-base-spacing-unit--large * 2;
+  height: calc(#{$inuit-base-spacing-unit} - 1px);
   border-radius: $inuit-base-spacing-unit--huge;
   padding: 1px;
   cursor: pointer;
@@ -146,10 +146,10 @@ $inuit-enable-toggle--disabled   : false !default;
     background-color: $inuit-toggle-background;
   }
   &:after {
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    width: calc(#{$inuit-base-spacing-unit--huge} - 6px);
+    top: -3px;
+    left: -1px;
+    height: $inuit-base-spacing-unit--large;
+    width: $inuit-base-spacing-unit--large;
     border: 1px solid $inuit-toggle-switch-border;
     border-radius: calc(#{$inuit-base-spacing-unit--huge} - 6px);
     box-shadow: $inuit-toggle-switch-shadow;
