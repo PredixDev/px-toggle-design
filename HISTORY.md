@@ -1,4 +1,12 @@
-v2.0.0
+v2.0.0-prerelease-2
+==================
+* merge pull request, add pointer-events, remove empty rules
+
+v2.0.0-prerelease-1
+==================
+* bump defaults-design
+
+v2.0.0-prerelease
 ==================
 * Major bump to pick up redesigned sub dependencies
 

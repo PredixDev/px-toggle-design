@@ -258,8 +258,6 @@ $inuit-enable-toggle--disabled   : false !default;
     width: $inuit-base-spacing-unit--huge;
     min-width: $inuit-base-spacing-unit--huge;
     height: calc(#{$inuit-base-spacing-unit--small} + 1px);
-    &:before {
-    }
     &:after {
       top: -2px;
       left: 0px;
@@ -293,8 +291,6 @@ $inuit-enable-toggle--disabled   : false !default;
     width: $inuit-base-spacing-unit--huge * 2;
     min-width: $inuit-base-spacing-unit--huge * 2;
     height: $inuit-base-spacing-unit--large;
-    &:before {
-    }
     &:after {
       top: calculateRem(-5px);
       left: calculateRem(-1px);
