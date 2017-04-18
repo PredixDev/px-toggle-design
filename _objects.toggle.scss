@@ -42,7 +42,7 @@ $inuit-toggle-background        : var(--px-toggle-backgound-color--off, $gray4) 
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-border            : var(--px-toggle-border-color--off, $gray5) !default;
+$inuit-toggle-border            : var(--px-toggle-border-color--off, $gray4) !default;
 
 /// Sets the toggle background color. This color is in use when the toggle is on/activated.
 ///
@@ -64,7 +64,7 @@ $inuit-toggle-disabled-background                      : $white !default;
 /// Disabled checked background color
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-checked-disabled-background              : $gray4 !default;
+$inuit-toggle-checked-disabled-background              : $gray2 !default;
 
 /// Disabled border color
 /// @group px-toggle-design:variables:style

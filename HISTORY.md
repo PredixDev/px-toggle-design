@@ -1,3 +1,7 @@
+v1.2.1
+==================
+* update selected/disabled toggle style to distinguish between deselected/enabled
+
 v1.2.0
 ==================
 * add disabled toggle styles
@@ -24,7 +28,7 @@ v1.1.2
 
 v1.1.1
 ==================
-* Update missed design depndencies
+* Update missed design dependencies
 
 v1.1.0
 ==================
