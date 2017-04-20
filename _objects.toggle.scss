@@ -48,7 +48,7 @@ $inuit-toggle-switch-shadow     : 0px 1px 2px var(--px-toggle-switch-shadow-colo
 ///
 /// @group px-toggle-design:variables:style
 /// @type Color [default]
-$inuit-toggle-background        : var(--px-toggle-backgound-color-off, $white);
+$inuit-toggle-background        : var(--px-toggle-backgound-color-off, $gray3);
 
 /// Sets the toggle border color. This color is in use when the toggle is off/deactivated.
 ///
