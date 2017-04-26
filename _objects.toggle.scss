@@ -166,7 +166,6 @@ $inuit-enable-toggle--disabled   : false !default;
   transition: background .4s;
   background-color: $inuit-toggle-border;
   text-indent: -9999rem;
-  pointer-events: auto;
   &:before, &:after {
     position: absolute;
     display: block;
