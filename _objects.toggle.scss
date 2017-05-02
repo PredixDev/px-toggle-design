@@ -159,6 +159,8 @@ $inuit-enable-toggle--disabled   : false !default;
   min-width: $inuit-base-spacing-unit--large * 2;
   height: calc(#{$inuit-base-spacing-unit} - 1px);
   border-radius: $inuit-base-spacing-unit--huge;
+  margin-bottom: 0;
+  margin-left: 0;
   padding: 1px;
   cursor: pointer;
   outline: none;
