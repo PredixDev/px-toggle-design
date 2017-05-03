@@ -1,14 +1,8 @@
-v2.0.0-prerelease-2
-==================
-* merge pull request, add pointer-events, remove empty rules
-
-v2.0.0-prerelease-1
-==================
-* bump defaults-design
-
-v2.0.0-prerelease
+v2.0.0
 ==================
 * Major bump to pick up redesigned sub dependencies
+* merge pull request, add pointer-events, remove empty rules
+* added margin 0 to avoid conflicts with forms design
 
 v1.2.0
 ==================
