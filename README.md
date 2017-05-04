@@ -37,13 +37,13 @@ You can change style variables to customize the design of the toggle module. To 
 ```
 $inuit-toggle-namespace
 $inuit-toggle-color
-$inuit-toggle-switch
-$inuit-toggle-switch-border
-$inuit-toggle-switch-shadow
+$inuit-toggle__switch
+$inuit-toggle__switch-border
+$inuit-toggle__switch-shadow
 $inuit-toggle-background
-$inuit-toggle-border
+$inuit-toggle__background--checked
 $inuit-toggle-background--on
-$inuit-toggle-border--on
+$inuit-toggle__background--checked--on
 ```
 
 ### 3. Import Sass File

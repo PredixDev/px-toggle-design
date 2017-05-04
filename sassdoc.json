@@ -137,8 +137,8 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-switch",
-            "value": "var(--px-toggle-switch-color, $white)",
+            "name": "inuit-toggle__switch",
+            "value": "var(--px-toggle__switch-color, $white)",
             "scope": "private",
             "line": {
                 "start": 21,
@@ -163,8 +163,8 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-switch--hover",
-            "value": "var(--px-toggle-switch-color-hover, $gray4)",
+            "name": "inuit-toggle__switch--hover",
+            "value": "var(--px-toggle__switch-color-hover, $gray4)",
             "scope": "private",
             "line": {
                 "start": 27,
@@ -189,8 +189,8 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-switch--pressed",
-            "value": "var(--px-toggle-switch-color-pressed, $gray7)",
+            "name": "inuit-toggle__switch--pressed",
+            "value": "var(--px-toggle__switch-color-pressed, $gray7)",
             "scope": "private",
             "line": {
                 "start": 33,
@@ -215,8 +215,8 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-switch-border",
-            "value": "var(--px-toggle-switch-border-color, $gray8)",
+            "name": "inuit-toggle__switch-border",
+            "value": "var(--px-toggle__switch-border-color, $gray8)",
             "scope": "private",
             "line": {
                 "start": 39,
@@ -241,8 +241,8 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-switch-shadow",
-            "value": "0px 1px 2px var(--px-toggle-switch-shadow-color, rgba($black, .15))",
+            "name": "inuit-toggle__switch-shadow",
+            "value": "0px 1px 2px var(--px-toggle__switch-shadow-color, rgba($black, .15))",
             "scope": "private",
             "line": {
                 "start": 45,
@@ -260,7 +260,7 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is off/deactivated.\n\n",
+        "description": "Sets the toggle background color. This color is in use when the toggle is unchecked.\n\n",
         "commentRange": {
             "start": 47,
             "end": 50
@@ -286,15 +286,15 @@
         }
     },
     {
-        "description": "Sets the toggle border color. This color is in use when the toggle is off/deactivated.\n\n",
+        "description": "Sets the toggle border color. This color is in use when the toggle is unchecked.\n\n",
         "commentRange": {
             "start": 53,
             "end": 56
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-border",
-            "value": "var(--px-toggle-border-color-off, $gray8)",
+            "name": "inuit-toggle__background--checked",
+            "value": "var(--px-toggle__background--checked-color-off, $gray8)",
             "scope": "private",
             "line": {
                 "start": 57,
@@ -312,14 +312,14 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is on/activated.\n\n",
+        "description": "Sets the toggle background color. This color is in use when the toggle is checked.\n\n",
         "commentRange": {
             "start": 59,
             "end": 62
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-background-on",
+            "name": "inuit-toggle__background--checked",
             "value": "var(--px-toggle-background-color-on, $primary-default)",
             "scope": "private",
             "line": {
@@ -338,15 +338,15 @@
         }
     },
     {
-        "description": "Sets the toggle border color. This color is in use when the toggle is on/activated.\n\n",
+        "description": "Sets the toggle border color. This color is in use when the toggle is checked.\n\n",
         "commentRange": {
             "start": 65,
             "end": 68
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-border-on",
-            "value": "var(--px-toggle-border-color-on, $primary-default)",
+            "name": "inuit-toggle__background--checked-on",
+            "value": "var(--px-toggle__background--checked-color-on, $primary-default)",
             "scope": "private",
             "line": {
                 "start": 69,
@@ -364,14 +364,14 @@
         }
     },
     {
-        "description": "Sets the toggle background color on hover. This color is in use when the toggle is on/activated.\n\n",
+        "description": "Sets the toggle background color on hover. This color is in use when the toggle is checked.\n\n",
         "commentRange": {
             "start": 71,
             "end": 74
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-background-on--hover",
+            "name": "inuit-toggle__background--checked--hover",
             "value": "var(--px-toggle-background-color-on-hover, $primary-hover)",
             "scope": "private",
             "line": {
@@ -390,14 +390,14 @@
         }
     },
     {
-        "description": "Sets the toggle background color on pressed. This color is in use when the toggle is on/activated.\n\n",
+        "description": "Sets the toggle background color on pressed. This color is in use when the toggle is checked.\n\n",
         "commentRange": {
             "start": 77,
             "end": 80
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-background-on--pressed",
+            "name": "inuit-toggle__background--checked--pressed",
             "value": "var(--px-toggle-background-color-on-pressed, $primary-pressed)",
             "scope": "private",
             "line": {
@@ -449,7 +449,7 @@
         },
         "context": {
             "type": "variable",
-            "name": "inuit-toggle-checked-disabled-background",
+            "name": "inuit-toggle__background--checked--disabled",
             "value": "var(--px-toggle-checked-disabled-background, $gray4)",
             "scope": "private",
             "line": {
