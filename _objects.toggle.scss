@@ -189,7 +189,7 @@ $inuit-enable-toggle--disabled   : false !default;
     height: $inuit-base-spacing-unit--large;
     width: $inuit-base-spacing-unit--large;
     border: 1px solid $inuit-toggle-switch-border;
-    border-radius: $inuit-base-spacing-unit--huge;
+    border-radius: 50%;
     box-shadow: $inuit-toggle-switch-shadow;
     background-color: $inuit-toggle-switch;
     transition: margin .4s, background .4s, border-color .4s;
