@@ -1,14 +1,9 @@
-v2.0.0-prerelease-2
+v2.0.0
 ==================
+* update toggle-design classes and colors per design specs
+* major bump to pick up redesigned sub dependencies
 * merge pull request, add pointer-events, remove empty rules
-
-v2.0.0-prerelease-1
-==================
-* bump defaults-design
-
-v2.0.0-prerelease
-==================
-* Major bump to pick up redesigned sub dependencies
+* added margin 0 to avoid conflicts with forms design
 
 v1.2.0
 ==================
@@ -36,7 +31,7 @@ v1.1.2
 
 v1.1.1
 ==================
-* Update missed design depndencies
+* Update missed design dependencies
 
 v1.1.0
 ==================
@@ -64,7 +59,7 @@ v0.2.21
 
 v0.2.20
 ==================
-* bumping sassdoc to propogate clipboard changes
+* bumping sassdoc to propagate clipboard changes
 
 v0.2.19
 ==================
