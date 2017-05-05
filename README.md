@@ -36,14 +36,26 @@ You can change style variables to customize the design of the toggle module. To 
 
 ```
 $inuit-toggle-namespace
-$inuit-toggle-color
-$inuit-toggle__switch
-$inuit-toggle__switch-border
-$inuit-toggle__switch-shadow
-$inuit-toggle-background
 $inuit-toggle__background--checked
-$inuit-toggle-background--on
-$inuit-toggle__background--checked--on
+$inuit-toggle__background--checked--hover
+$inuit-toggle__background--checked--pressed
+$inuit-toggle__background--checked--disabled
+$inuit-toggle__background--unchecked
+$inuit-toggle__background--unchecked--hover
+$inuit-toggle__background--unchecked--pressed
+$inuit-toggle__background--unchecked--disabled
+$inuit-toggle__background-border--unchecked
+$inuit-toggle__background-border--unchecked--hover
+$inuit-toggle__background-border--unchecked--pressed
+$inuit-toggle__background-border--unchecked--disabled
+$inuit-toggle__switch
+$inuit-toggle__switch--hover
+$inuit-toggle__switch--pressed
+$inuit-toggle__switch--disabled
+$inuit-toggle__switch-border
+$inuit-toggle__switch-border--hover
+$inuit-toggle__switch-border--pressed
+$inuit-toggle__switch-border--disabled
 ```
 
 ### 3. Import Sass File
@@ -72,11 +84,11 @@ You can create a toggle with the following code:
 
 #### Order matters (input before label)
 
-Your `<input>` tag must come right before you `<label>` tag, exactly as the code appears in the example above. The toggle relies on CSS's adjacent sibling selector. If you don't place the tags in the right order, the toggle won't work.
+Your `<input>` tag must come right before your `<label>` tag, exactly as the code appears in the example above. The toggle relies on CSS's adjacent sibling selector. If you don't place the tags in the right order, the toggle won't work.
 
-#### Match your input id and label for
+#### Match your `input id` and `label for`
 
-Your id attribute on your `<input>` tag should match the for attribute on your `<label>` tag to keep them in sync:
+Your 'id' attribute on your `<input>` tag should match the 'for' attribute on your `<label>` tag to keep them in sync:
 
 ```
 <!-- Input and label must have the same ID -->
@@ -86,7 +98,7 @@ Your id attribute on your `<input>` tag should match the for attribute on your `
 
 #### Keep classes in sync
 
-Both the `<input>` and `<label>` tags should have the same modifiers as their sibling. For example, if you're using a small toggle, make sure you apply the `toggle__input--small` class and the `toggle__label--small` class like the example below:
+Both the `<input>` and `<label>` tags should have the same modifiers as their sibling. For example, if you're using a small toggle, make sure you apply the `toggle__input--small` class and the `toggle__label--small` class, as in the example below:
 
 ```
 <!-- Small modifier on both input and label -->
@@ -114,6 +126,10 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
 <!-- Huge toggle -->
 <input id="huge" class="toggle__input toggle__input--huge" type="checkbox">
 <label for="huge" class="toggle__label toggle__label--huge"></label>
+
+<!-- Disabled toggle -->
+<input id="disabled" class="toggle__input" type="checkbox">
+<label for="disabled" class="toggle__label toggle__label--disabled"></label>
 ```
 
 ------------------

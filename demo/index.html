@@ -198,9 +198,10 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
     _importCode : function() {
       var opts = this.selectedOptions || {}, strings = [];
 
-      if (opts.Size === "small")    strings.push("inuit-enable-toggle--small : true;");
-      if (opts.Size === "large")    strings.push("inuit-enable-toggle--large : true;");
-      if (opts.Size === "huge")     strings.push("inuit-enable-toggle--huge : true;");
+      if (opts.Size === "small")      strings.push("inuit-enable-toggle--small : true;");
+      if (opts.Size === "large")      strings.push("inuit-enable-toggle--large : true;");
+      if (opts.Size === "huge")       strings.push("inuit-enable-toggle--huge : true;");
+      if (opts.Disabled)              strings.push("inuit-enable-toggle--disabled : true;");
 
       return (strings.join("\n") + "\n@import 'px-toggle-design/_objects.toggle.scss';").trim();
     },
