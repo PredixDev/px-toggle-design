@@ -1,9 +1,9 @@
 [
     {
-        "description": "Generates the CSS for small toggles if enabled.\n\n",
+        "description": "Generates the CSS for small toggles if enabled.\n",
         "commentRange": {
-            "start": 144,
-            "end": 147
+            "start": 143,
+            "end": 145
         },
         "context": {
             "type": "variable",
@@ -11,8 +11,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 148,
-                "end": 148
+                "start": 146,
+                "end": 146
             }
         },
         "group": [
@@ -26,10 +26,10 @@
         }
     },
     {
-        "description": "Generates the CSS for large toggles if enabled.\n\n",
+        "description": "Generates the CSS for large toggles if enabled.\n",
         "commentRange": {
-            "start": 150,
-            "end": 153
+            "start": 148,
+            "end": 150
         },
         "context": {
             "type": "variable",
@@ -37,8 +37,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 154,
-                "end": 154
+                "start": 151,
+                "end": 151
             }
         },
         "group": [
@@ -52,10 +52,10 @@
         }
     },
     {
-        "description": "Generates the CSS for huge toggles if enabled.\n\n",
+        "description": "Generates the CSS for huge toggles if enabled.\n",
         "commentRange": {
-            "start": 156,
-            "end": 159
+            "start": 153,
+            "end": 155
         },
         "context": {
             "type": "variable",
@@ -63,8 +63,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 160,
-                "end": 160
+                "start": 156,
+                "end": 156
             }
         },
         "group": [
@@ -78,10 +78,10 @@
         }
     },
     {
-        "description": "Generates the CSS for disabled toggles if enabled.\n\n",
+        "description": "Generates the CSS for disabled toggles if enabled.\n",
         "commentRange": {
-            "start": 162,
-            "end": 165
+            "start": 158,
+            "end": 160
         },
         "context": {
             "type": "variable",
@@ -89,8 +89,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 166,
-                "end": 166
+                "start": 161,
+                "end": 161
             }
         },
         "group": [
@@ -104,10 +104,10 @@
         }
     },
     {
-        "description": "Sets a prepended namespace for all generated classes.\n\n",
+        "description": "Prepended namespace for all generated classes.\n",
         "commentRange": {
             "start": 11,
-            "end": 14
+            "end": 13
         },
         "context": {
             "type": "variable",
@@ -115,8 +115,8 @@
             "value": "$inuit-namespace",
             "scope": "default",
             "line": {
-                "start": 15,
-                "end": 15
+                "start": 14,
+                "end": 14
             }
         },
         "group": [
@@ -130,10 +130,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is checked and enabled.\n\n",
+        "description": "Toggle background color when checked and enabled.\n",
         "commentRange": {
-            "start": 17,
-            "end": 20
+            "start": 16,
+            "end": 19
         },
         "context": {
             "type": "variable",
@@ -141,14 +141,17 @@
             "value": "var(--px-toggle__background--checked, $primary-default)",
             "scope": "private",
             "line": {
-                "start": 21,
-                "end": 21
+                "start": 20,
+                "end": 20
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--checked"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -156,10 +159,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color on hover. This color is in use when the toggle is checked and enabled.\n\n",
+        "description": "Toggle background color on hover when checked and enabled.\n",
         "commentRange": {
-            "start": 23,
-            "end": 26
+            "start": 22,
+            "end": 25
         },
         "context": {
             "type": "variable",
@@ -167,14 +170,17 @@
             "value": "var(--px-toggle__background--checked--hover, $primary-hover)",
             "scope": "private",
             "line": {
-                "start": 27,
-                "end": 27
+                "start": 26,
+                "end": 26
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--checked--hover"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -182,10 +188,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color on pressed/active. This color is in use when the toggle is checked and enabled.\n\n",
+        "description": "Toggle background color on pressed/active when checked and enabled.\n",
         "commentRange": {
-            "start": 29,
-            "end": 32
+            "start": 28,
+            "end": 31
         },
         "context": {
             "type": "variable",
@@ -193,14 +199,17 @@
             "value": "var(--px-toggle__background--checked--pressed, $primary-pressed)",
             "scope": "private",
             "line": {
-                "start": 33,
-                "end": 33
+                "start": 32,
+                "end": 32
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--checked--pressed"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -208,10 +217,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is checked and disabled.\n\n",
+        "description": "Toggle background color when checked and disabled.\n",
         "commentRange": {
-            "start": 35,
-            "end": 38
+            "start": 34,
+            "end": 37
         },
         "context": {
             "type": "variable",
@@ -219,14 +228,17 @@
             "value": "var(--px-toggle__background--checked--disabled, rgba($black,0.2))",
             "scope": "private",
             "line": {
-                "start": 39,
-                "end": 39
+                "start": 38,
+                "end": 38
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__background--checked--disabled"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -234,10 +246,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle background color when unchecked and enabled.\n",
         "commentRange": {
-            "start": 41,
-            "end": 44
+            "start": 40,
+            "end": 43
         },
         "context": {
             "type": "variable",
@@ -245,14 +257,17 @@
             "value": "var(--px-toggle__background--unchecked, $gray3)",
             "scope": "private",
             "line": {
-                "start": 45,
-                "end": 45
+                "start": 44,
+                "end": 44
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--unchecked"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -260,10 +275,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color on hover. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle background color on hover when unchecked and enabled.\n",
         "commentRange": {
-            "start": 47,
-            "end": 50
+            "start": 46,
+            "end": 49
         },
         "context": {
             "type": "variable",
@@ -271,14 +286,17 @@
             "value": "var(--px-toggle__background--unchecked--hover, $gray5)",
             "scope": "private",
             "line": {
-                "start": 51,
-                "end": 51
+                "start": 50,
+                "end": 50
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--unchecked--hover"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -286,10 +304,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color on pressed/active. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle background color on pressed/active when unchecked and enabled.\n",
         "commentRange": {
-            "start": 53,
-            "end": 56
+            "start": 52,
+            "end": 55
         },
         "context": {
             "type": "variable",
@@ -297,14 +315,17 @@
             "value": "var(--px-toggle__background--unchecked--pressed, $gray9)",
             "scope": "private",
             "line": {
-                "start": 57,
-                "end": 57
+                "start": 56,
+                "end": 56
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--unchecked--pressed"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -312,10 +333,10 @@
         }
     },
     {
-        "description": "Sets the toggle background color. This color is in use when the toggle is unchecked and disabled.\n\n",
+        "description": "Toggle background color when unchecked and disabled.\n",
         "commentRange": {
-            "start": 59,
-            "end": 62
+            "start": 58,
+            "end": 61
         },
         "context": {
             "type": "variable",
@@ -323,14 +344,17 @@
             "value": "var(--px-toggle__background--unchecked--disabled, $white)",
             "scope": "private",
             "line": {
-                "start": 63,
-                "end": 63
+                "start": 62,
+                "end": 62
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]]",
+        "todo": [
+            "--px-toggle__background--unchecked--disabled"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -338,10 +362,10 @@
         }
     },
     {
-        "description": "Sets the toggle border color. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle border color when unchecked and enabled.\n",
         "commentRange": {
-            "start": 65,
-            "end": 68
+            "start": 64,
+            "end": 67
         },
         "context": {
             "type": "variable",
@@ -349,14 +373,17 @@
             "value": "var(--px-toggle__background-border--unchecked, $gray8)",
             "scope": "private",
             "line": {
-                "start": 69,
-                "end": 69
+                "start": 68,
+                "end": 68
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__background-border--unchecked"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -364,10 +391,10 @@
         }
     },
     {
-        "description": "Sets the toggle border color on hover. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle border color on hover when unchecked and enabled.\n",
         "commentRange": {
-            "start": 71,
-            "end": 74
+            "start": 70,
+            "end": 73
         },
         "context": {
             "type": "variable",
@@ -375,14 +402,17 @@
             "value": "var(--px-toggle__background-border--unchecked--hover, $gray10)",
             "scope": "private",
             "line": {
-                "start": 75,
-                "end": 75
+                "start": 74,
+                "end": 74
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__background-border--unchecked--hover"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -390,10 +420,10 @@
         }
     },
     {
-        "description": "Sets the toggle border color on pressed/active. This color is in use when the toggle is unchecked and enabled.\n\n",
+        "description": "Toggle border color on pressed/active when unchecked and enabled.\n",
         "commentRange": {
-            "start": 77,
-            "end": 80
+            "start": 76,
+            "end": 79
         },
         "context": {
             "type": "variable",
@@ -401,14 +431,17 @@
             "value": "var(--px-toggle__background-border--unchecked-pressed, $gray12)",
             "scope": "private",
             "line": {
-                "start": 81,
-                "end": 81
+                "start": 80,
+                "end": 80
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__background-border--unchecked-pressed"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -416,10 +449,10 @@
         }
     },
     {
-        "description": "Sets the toggle border color. This color is in use when the toggle is unchecked and disabled.\n\n",
+        "description": "Toggle border color when unchecked and disabled.\n",
         "commentRange": {
-            "start": 83,
-            "end": 86
+            "start": 82,
+            "end": 85
         },
         "context": {
             "type": "variable",
@@ -427,14 +460,17 @@
             "value": "var(--px-toggle__background-border--unchecked--disabled, rgba($black,0.2))",
             "scope": "private",
             "line": {
-                "start": 87,
-                "end": 87
+                "start": 86,
+                "end": 86
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__background-border--unchecked--disabled"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -442,10 +478,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch color. This color is in use when the toggle is both checked and unchecked.\n(The \"switch\" is the circular part of the toggle.)\n\n",
+        "description": "Toggle switch color when both checked and unchecked.\n(The \"switch\" is the circular part of the toggle.)\n",
         "commentRange": {
-            "start": 89,
-            "end": 93
+            "start": 88,
+            "end": 92
         },
         "context": {
             "type": "variable",
@@ -453,14 +489,17 @@
             "value": "var(--px-toggle__switch, $white)",
             "scope": "private",
             "line": {
-                "start": 94,
-                "end": 94
+                "start": 93,
+                "end": 93
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -468,10 +507,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch color on hover. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch color on hover when both checked and unchecked.\n",
         "commentRange": {
-            "start": 96,
-            "end": 99
+            "start": 95,
+            "end": 98
         },
         "context": {
             "type": "variable",
@@ -479,14 +518,17 @@
             "value": "var(--px-toggle__switch--hover, $gray4)",
             "scope": "private",
             "line": {
-                "start": 100,
-                "end": 100
+                "start": 99,
+                "end": 99
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch--hover"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -494,10 +536,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch color on pressed/active. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch color on pressed/active when both checked and unchecked.\n",
         "commentRange": {
-            "start": 102,
-            "end": 105
+            "start": 101,
+            "end": 104
         },
         "context": {
             "type": "variable",
@@ -505,14 +547,17 @@
             "value": "var(--px-toggle__switch--pressed, $gray7)",
             "scope": "private",
             "line": {
-                "start": 106,
-                "end": 106
+                "start": 105,
+                "end": 105
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch--pressed"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -520,10 +565,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch color on disabled. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch color on disabled when both checked and unchecked.\n",
         "commentRange": {
-            "start": 108,
-            "end": 111
+            "start": 107,
+            "end": 110
         },
         "context": {
             "type": "variable",
@@ -531,14 +576,17 @@
             "value": "var(--px-toggle__switch--disabled, $white)",
             "scope": "private",
             "line": {
-                "start": 112,
-                "end": 112
+                "start": 111,
+                "end": 111
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch--disabled"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -546,10 +594,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch border color. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch border color when both checked and unchecked.\n",
         "commentRange": {
-            "start": 114,
-            "end": 117
+            "start": 113,
+            "end": 116
         },
         "context": {
             "type": "variable",
@@ -557,14 +605,17 @@
             "value": "var(--px-toggle__switch-border, $gray8)",
             "scope": "private",
             "line": {
-                "start": 118,
-                "end": 118
+                "start": 117,
+                "end": 117
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch-border"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -572,10 +623,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch border color on hover. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch border color on hover when both checked and unchecked.\n",
         "commentRange": {
-            "start": 120,
-            "end": 123
+            "start": 119,
+            "end": 122
         },
         "context": {
             "type": "variable",
@@ -583,14 +634,17 @@
             "value": "var(--px-toggle__switch-border--hover, $gray8)",
             "scope": "private",
             "line": {
-                "start": 124,
-                "end": 124
+                "start": 123,
+                "end": 123
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch-border--hover"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -598,10 +652,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch border color on pressed/active. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch border color on pressed/active when both checked and unchecked.\n",
         "commentRange": {
-            "start": 126,
-            "end": 129
+            "start": 125,
+            "end": 128
         },
         "context": {
             "type": "variable",
@@ -609,14 +663,17 @@
             "value": "var(--px-toggle__switch-border--pressed, $gray8)",
             "scope": "private",
             "line": {
-                "start": 130,
-                "end": 130
+                "start": 129,
+                "end": 129
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch-border--pressed"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -624,10 +681,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch border color on disabled. This color is in use when the toggle is both checked and unchecked.\n\n",
+        "description": "Toggle switch border color on disabled when both checked and unchecked.\n",
         "commentRange": {
-            "start": 132,
-            "end": 135
+            "start": 131,
+            "end": 134
         },
         "context": {
             "type": "variable",
@@ -635,14 +692,17 @@
             "value": "var(--px-toggle__switch-border--disabled, rgba($black,0.2))",
             "scope": "private",
             "line": {
-                "start": 136,
-                "end": 136
+                "start": 135,
+                "end": 135
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color [default]",
+        "todo": [
+            "--px-toggle__switch-border--disabled"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
@@ -650,10 +710,10 @@
         }
     },
     {
-        "description": "Sets the toggle switch shadow color.\n\n",
+        "description": "Toggle switch shadow color.\n",
         "commentRange": {
-            "start": 138,
-            "end": 141
+            "start": 137,
+            "end": 140
         },
         "context": {
             "type": "variable",
@@ -661,14 +721,17 @@
             "value": "0px 1px 2px var(--px-toggle__switch-shadow-color, rgba($black, .15))",
             "scope": "private",
             "line": {
-                "start": 142,
-                "end": 142
+                "start": 141,
+                "end": 141
             }
         },
         "group": [
             "px-toggle-design:variables:style"
         ],
         "type": "Color | String [default]",
+        "todo": [
+            "--px-toggle__switch-shadow-color"
+        ],
         "access": "public",
         "file": {
             "path": "_objects.toggle.scss",
