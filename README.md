@@ -1,74 +1,56 @@
 # px-toggle-design
 
-Toggle is a simple on/off switch. It's created with CSS applied to a checkbox and label. Use it to create simple UI elements that enable and disable things.
+The Predix UI Toggle module provides styling for a toggle component (an on/off switch). It is essentially CSS applied to a checkbox and label. 
 
-**px-toggle-design is a Predix UI CSS module.** You can find a demonstration and full documentation on the [Predix UI catalog](https://predixdev.github.io/predix-ui/?show=px-toggle-design&type=css]).
+## Dependencies
 
-------------------
+The `px-toggle-design` module depends on the following modules (automatically included with Bower install):
 
-## Install the module
+* [px-colors-design](https://github.com/PredixDev/px-colors-design)
+* [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
+* [px-helpers-design](https://github.com/PredixDev/px-helpers-design)
 
-To use the toggle module, you need to install it in your project using Bower. Run this task on the command line from inside your project folder:
+## Installation
 
-```
-bower install --save px-toggle-design
-```
+Install this module and its dependencies using bower:
 
-------------------
+    bower install --save px-toggle-design
 
-## Import it in your Sass
+Once installed, `@import` into your project's Sass file in its Objects layer:
 
-The toggle module won't do anything until you import and configure it in your project Sass file. Follow these steps to import it:
+    @import "px-toggle-design/_objects.toggle.scss";
 
-### 1. Enable Flags
+## Usage
 
-You can turn on flags to generate additional styles defined in the toggle module. To generate new styles, set any of these flags to true above the module's @import statement in your project Sass file:
+These flags are available and, if needed, should be set to `true` prior to importing the module:
 
-```
-$inuit-enable-toggle--small : true;
-$inuit-enable-toggle--large : true;
-$inuit-enable-toggle--huge  : true;
-```
+    $inuit-enable-toggle--small;
+    $inuit-enable-toggle--large;
+    $inuit-enable-toggle--huge;
 
-### 2. Customize Styles
+The following variables are available for use in the module:
 
-You can change style variables to customize the design of the toggle module. To change styles, set any the variables below to a new value above the module's @import statement in your project Sass file:
-
-```
-$inuit-toggle-namespace
-$inuit-toggle__background--checked
-$inuit-toggle__background--checked--hover
-$inuit-toggle__background--checked--pressed
-$inuit-toggle__background--checked--disabled
-$inuit-toggle__background--unchecked
-$inuit-toggle__background--unchecked--hover
-$inuit-toggle__background--unchecked--pressed
-$inuit-toggle__background--unchecked--disabled
-$inuit-toggle__background-border--unchecked
-$inuit-toggle__background-border--unchecked--hover
-$inuit-toggle__background-border--unchecked--pressed
-$inuit-toggle__background-border--unchecked--disabled
-$inuit-toggle__switch
-$inuit-toggle__switch--hover
-$inuit-toggle__switch--pressed
-$inuit-toggle__switch--disabled
-$inuit-toggle__switch-border
-$inuit-toggle__switch-border--hover
-$inuit-toggle__switch-border--pressed
-$inuit-toggle__switch-border--disabled
-```
-
-### 3. Import Sass File
-
-Import the module by placing this code into the **Objects** layer of your project Sass file:
-
-```
-@import "px-toggle-design/_objects.toggle.scss";
-```
-
-------------------
-
-## Use it in your HTML
+    $inuit-toggle-namespace
+    $inuit-toggle__background--checked
+    $inuit-toggle__background--checked--hover
+    $inuit-toggle__background--checked--pressed
+    $inuit-toggle__background--checked--disabled
+    $inuit-toggle__background--unchecked
+    $inuit-toggle__background--unchecked--hover
+    $inuit-toggle__background--unchecked--pressed
+    $inuit-toggle__background--unchecked--disabled
+    $inuit-toggle__background-border--unchecked
+    $inuit-toggle__background-border--unchecked--hover
+    $inuit-toggle__background-border--unchecked--pressed
+    $inuit-toggle__background-border--unchecked--disabled
+    $inuit-toggle__switch
+    $inuit-toggle__switch--hover
+    $inuit-toggle__switch--pressed
+    $inuit-toggle__switch--disabled
+    $inuit-toggle__switch-border
+    $inuit-toggle__switch-border--hover
+    $inuit-toggle__switch-border--pressed
+    $inuit-toggle__switch-border--disabled
 
 Toggles are just fancy checkboxes. After you import the toggle library, you can add classes to an `<input>` tag and `<label>` tag to create your toggle element.
 
@@ -132,11 +114,4 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
 <label for="disabled" class="toggle__label toggle__label--disabled"></label>
 ```
 
-------------------
-
-## Dependencies
-This module depends on the following modules (automatically included with Bower install):
-
-* [px-colors-design](https://github.com/PredixDev/px-colors-design)
-* [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
-* [px-helpers-design](https://github.com/PredixDev/px-helpers-design)
+View the full API [here](http://predixdev.github.io/px-toggle-design/).
