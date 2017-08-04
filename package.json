@@ -1,6 +1,6 @@
 {
     "name": "px-toggle-design",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Toggle is a simple on/off switch.",
     "private": false,
     "scripts": {
