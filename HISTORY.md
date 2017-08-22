@@ -1,3 +1,7 @@
+v2.0.2
+==================
+* fix documentation
+
 v2.0.1
 ==================
 * runtime theming for demo
