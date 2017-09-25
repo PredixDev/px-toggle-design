@@ -1,3 +1,7 @@
+v2.0.4
+==================
+* bind disabled to prevent keyboard toggling
+
 v2.0.3
 ==================
 * fix documentation

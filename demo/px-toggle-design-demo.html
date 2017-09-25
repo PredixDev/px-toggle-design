@@ -45,7 +45,7 @@
 
 <!-- 3: Make HTML Demo -->
 <section data-slot="demoHTML">
-<input id="example" class$="{{inputClasses}}" type="checkbox" checked$="{{togglesChecked::change}}" />
+<input id="example" class$="{{inputClasses}}" type="checkbox" checked$="{{togglesChecked::change}}" disabled$={{disabled}} />
 <label for="example" class$="{{labelClasses}}"></label>
 </section>
 
@@ -161,6 +161,7 @@ Here are all the possible toggles you could use. Remember, you'll need to set th
       this.inputClasses = this._inputClasses();
       this.labelClasses = this._labelClasses();
       this.importCode = this._importCode();
+      this.disabled = this.selectedOptions.Disabled;
 
       // Wait, then tell the highlighter to run after dom-if restamps
       this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
