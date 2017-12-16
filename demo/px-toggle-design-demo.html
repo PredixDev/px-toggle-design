@@ -25,7 +25,7 @@
   selected-options="{{selectedOptions}}">
 
 <!-- 2: Set Options -->
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Size"
   choose-with="dropdown"
   choices='[
@@ -37,25 +37,25 @@
   default-choice="regular (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
 <!-- 3: Make HTML Demo -->
-<section data-slot="demoHTML">
+<section slot="demo-html">
 <input id="example" class$="{{inputClasses}}" type="checkbox" checked$="{{togglesChecked::change}}" disabled$={{disabled}} />
 <label for="example" class$="{{labelClasses}}"></label>
 </section>
 
 <!-- 4: Set Import Slot -->
-<section data-slot="import">
+<section slot="import">
 {{importCode}}
 </section>
 
 <!-- 5: Set Usage HTML -->
-<section data-slot="usageHTML">
+<section slot="usage-html">
 <!-- Default toggle -->
 <input id="toggle2" class="toggle__input" type="checkbox">
 <label for="toggle2" class="toggle__label"></label>
@@ -71,7 +71,7 @@
 </section>
 
 <!-- 5: Set Usage Info -->
-<section data-slot="usage">
+<section slot="usage">
 Toggles are just fancy checkboxes. After you import the toggle library, you can add classes to an `<input>` tag and `<label>` tag to create your toggle element.
 
 You can create a basic toggle with the following code:

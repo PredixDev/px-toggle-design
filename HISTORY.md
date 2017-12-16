@@ -1,3 +1,7 @@
+v2.0.5
+==================
+* Upgrade docs to use Polymer 2.x, bump px-demo and px-sass-doc dependencies
+
 v2.0.4
 ==================
 * bind disabled to prevent keyboard toggling
